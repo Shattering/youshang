@@ -1,9 +1,13 @@
 import React from 'react';
-import Home from 'pages/home/'
+import { IndexContainer as Index } from 'pages/index/'
+
+import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
   return (
-    <Home></Home>
+    <Router>
+      <Index></Index>
+    </Router>
   );
 }
 
