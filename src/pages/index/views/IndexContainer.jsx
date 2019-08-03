@@ -7,7 +7,7 @@ class IndexContainer extends Component {
     super(props);
     // 这边绑定是必要的，这样 `this` 才能在回调函数中使用
     this.state = {
-      currentIndex : 0,
+      currentIndex : 0
     };
     this.routes = [
       {
@@ -37,12 +37,23 @@ class IndexContainer extends Component {
     ]
     this.changeRoute = this.changeRoute.bind(this);
   }
-
   changeRoute(currentIndex,path) {
     this.setState({
       currentIndex
     });
     this.props.history.push(path)
+  }
+
+  componentWillMount(){
+    let url = window.location.pathname
+    this.routes.map((item,index) => {
+      if(url === item.path){
+        this.setState({
+          currentIndex : index
+        })
+      }
+      return 0;
+    })
   }
 
   render() {
