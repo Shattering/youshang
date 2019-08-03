@@ -1,6 +1,15 @@
 import React,{Component} from 'react'
 import IndexUI from './IndexUI'
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { wxapiAsync } from 'api/wx-api/actionCreator'
+
+const mapDispatch = (dispatch) => ({
+  isWxReady() {
+    dispatch(wxapiAsync())
+  }
+})
+
 
 class IndexContainer extends Component {
   constructor(props) {
@@ -65,6 +74,10 @@ class IndexContainer extends Component {
       ></IndexUI>
     )
   }
+
+  componentDidMount() {
+    this.props.isWxReady()
+  }
 }
 
-export default withRouter(IndexContainer)
+export default connect(null,mapDispatch)(withRouter(IndexContainer))

@@ -13,5 +13,6 @@ module.exports = override(
     pages: path.resolve(__dirname, './src/pages'),
     utils: path.resolve(__dirname, './src/utils'),
     store: path.resolve(__dirname, './src/store'),
+    api: path.resolve(__dirname, './src/api'),
   })
 );
