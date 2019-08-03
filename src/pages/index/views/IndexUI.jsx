@@ -14,7 +14,6 @@ import {
 export default (props) => {
   return(
     <Index>
-    {console.log(props)}
       <Main>
         <Switch>
           <Route exact path="/" component={Home}/>
@@ -30,7 +29,7 @@ export default (props) => {
               onClick={ props.changeRoute.bind(this,index,item.path)} 
               key={item.name}
             >
-              <img src={props.currentIndex === index?item.imgActive:item.img} alt="" />
+              <img  src={props.currentIndex === index?item.imgActive:item.img} alt="" />
               <span style={props.currentIndex === index?{color:"#2492EB"}:{color:"#353535"}}>
                 {item.name}
               </span>
