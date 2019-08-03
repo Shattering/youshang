@@ -1,0 +1,1 @@
+export const WXAPI = 'wx/wx-api'

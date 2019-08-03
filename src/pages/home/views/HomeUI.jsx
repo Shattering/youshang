@@ -3,10 +3,11 @@ import {
   Home
 } from './StyledHome'
 
-export default () => {
+export default (props) => {
   return(
     <Home>
-      home
+      <button onClick={props.scanQRCode}>扫一扫</button>
+      <p id="text"></p>
     </Home>
   )
 }
