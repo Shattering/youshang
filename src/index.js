@@ -4,6 +4,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import "./assets/styles/reset.css"
+import "./assets/styles/icons.css"
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

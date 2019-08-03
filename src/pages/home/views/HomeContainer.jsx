@@ -11,7 +11,7 @@ const mapState = (state) => ({
 class HomeContainer extends Component {
   onscanQRCode() {
     console.log(this.props.wxReady)
-    if(this.props.wxReady == 'false'){
+    if(this.props.wxReady === 'false'){
       Toast.fail('wx is not ready', 1);
       return ;
     }
