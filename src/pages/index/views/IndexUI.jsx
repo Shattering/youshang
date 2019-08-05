@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { HomeContainer as Home } from 'pages/home/'
+// import { StudentHomeContainer as StudentHome } from 'pages/home/'
+import { TeacherHomeContainer as TeacherHome } from 'pages/home/'
 import { TimetableContainer as Timetable } from 'pages/timetable/'
 import { MessageContainer as Message } from 'pages/message/'
 import { MineContainer as Mine } from 'pages/mine/'
@@ -16,7 +17,7 @@ export default (props) => {
     <Index>
       <Main>
         <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" component={TeacherHome}/>
           <Route path="/timetable" component={Timetable}/>
           <Route path="/message" component={Message}/>
           <Route path="/mine" component={Mine}/>
