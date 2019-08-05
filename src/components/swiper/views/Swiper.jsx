@@ -7,14 +7,6 @@ import 'swiper/dist/css/swiper.min.css'
 import Img1 from 'assets/images/swiper1.png'
 import Img2 from 'assets/images/swiper2.png'
  import Img3 from 'assets/images/swiper3.png'
-
-//  import Img1 from 'assets/images/swiper1@2x.png'
-// import Img2 from 'assets/images/swiper2@2x.png'
-//  import Img3 from 'assets/images/swiper3@2x.png'
- 
-// import Img11 from 'assets/images/swiper1@3x.png'
-// import Img21 from 'assets/images/swiper2@3x.png'
-// import Img31 from 'assets/images/swiper3@3x.png'
 import './swiper.css'
 class mySwiper extends React.Component {
   // state = {
