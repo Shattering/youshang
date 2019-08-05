@@ -5,9 +5,9 @@
 .bigheader{
   background: url(../../../assets/images/bottompenel5@2x.png) !important;
 }
-.sc-gzVnrw{
+/* .sc-gzVnrw{
   height: calc(100% - .49rem)!important;
-}
+} */
 .sc-bdVaJa{
   /* position: relative;
   top:0;
@@ -18,6 +18,20 @@
 .am-tabs {
   height: 70% !important;
 }
-/* .slider-slide img{
-  height: 140px !important;
+/* .eruLhQ .swiper-container {
+  width: 138%;
+  height: 169px;
+  margin-left: -76px;
 } */
+/* .eruLhQ .swiper-container {
+  width: 122%;
+  height: 118px;
+  margin-left: -68px;
+  margin-top: 28px;
+} */
+.eruLhQ .swiper-container {
+  width: 124%;
+  height: 123px;
+  margin-left: -68px;
+  margin-top: 21px;
+}

@@ -8,13 +8,12 @@ const Index = styled.div`
   
 `
 const Main = styled.div`
-  flex:1;
+  height: calc(100% - .49rem)!important;
 `
 const Nav = styled.div`
   height:.49rem;
   background:#fff;
   display:flex;
-  z-index: 99999;
 `
 const NavItem = styled.div`
   flex:1;

@@ -3,7 +3,7 @@ import {
   Home
 } from './StyledHome'
 import { TabBar } from 'antd-mobile';
-import Swiper from 'components/swiper/views/Swiper'
+import MySwiper from 'components/swiper/views/Swiper'
 import { FindTeacherContainer as FindTeacher, SubscribeTeacherContainer as SubscribeTeacher } from '../teacher/'
 class HomeContainer extends Component {
   constructor(props) {
@@ -17,8 +17,8 @@ class HomeContainer extends Component {
   render() {
     return (
       <Home>    
-         <Swiper></Swiper>
-         <div style={ { height: '100%', width: '100%' ,marginTop: '-.12rem'} }>
+        <MySwiper></MySwiper>
+         <div style={ { height: '100%', width: '100%' ,marginTop: '-.05rem'} }>
         <TabBar
           unselectedTintColor="#5e5e5e"
           tintColor="#5d83fe"

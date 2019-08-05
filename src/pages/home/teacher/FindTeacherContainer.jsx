@@ -1,11 +1,11 @@
 import React from 'react'
-import HomeItem from 'components/HomeItem/HomeItem'
+import FindItem from 'components/FindTeacherItem/FindItem'
 class FindTeacherContainer extends React.Component{
     render() {
         return(
          <>
          <div>Findeitem</div>
-         <HomeItem></HomeItem>
+         <FindItem></FindItem>
          </>
         )
     }
