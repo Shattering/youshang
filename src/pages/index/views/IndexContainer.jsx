@@ -20,7 +20,7 @@ class IndexContainer extends Component {
     };
     this.routes = [
       {
-        path:'/',
+        path:'/home',
         icon:'&#xe61e;',
         name:'首页'
       },
