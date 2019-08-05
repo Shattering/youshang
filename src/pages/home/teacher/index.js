@@ -1,6 +1,6 @@
-import FindTeacherContainer from './FindTeacherContainer'
-import SubscribeTeacherContainer from './SubscribeTeacherContainer'
+import TeacherOnlineContainer from './TeacherOnlineContainer'
+import TakeOrderContainer from './TakeOrderContainer'
 export {
-    FindTeacherContainer,
-    SubscribeTeacherContainer
+    TeacherOnlineContainer,
+    TakeOrderContainer
 }

@@ -7,7 +7,7 @@ const Index = styled.div`
   width:100%;
 `
 const Main = styled.div`
-  flex:1;
+  height: calc(100% - .49rem)!important;
 `
 const Nav = styled.div`
   height:.49rem;

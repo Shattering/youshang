@@ -1,5 +1,6 @@
-import HomeContainer from './views/HomeContainer'
-
+import StudentHomeContainer from './student/views/StudentHomeContainer'
+import TeacherHomeContainer from './teacher/views/TeacherHomeContainer'
 export {
-  HomeContainer
+  StudentHomeContainer,
+  TeacherHomeContainer
 }

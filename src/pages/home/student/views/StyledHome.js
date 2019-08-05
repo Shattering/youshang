@@ -5,6 +5,12 @@ const Home = styled.div`
     overflow: hidden;
     height: 100%;
 }
+.sc-htpNat{
+  height: 100%!important;
+}
+.sc-gzVnrw{
+  height: 100% !important;
+}
 .am-tabs-horizontal .am-tabs-pane-wrap-inactive {
     height: 100%;
     overflow: hidden;

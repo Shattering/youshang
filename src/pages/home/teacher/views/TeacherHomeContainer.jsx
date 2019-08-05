@@ -3,9 +3,9 @@ import {
   Home
 } from './StyledHome'
 import { TabBar } from 'antd-mobile';
-import Swiper from 'components/swiper/views/Swiper'
-import { FindTeacherContainer as FindTeacher, SubscribeTeacherContainer as SubscribeTeacher } from '../teacher/'
-class HomeContainer extends Component {
+import MySwiper from 'components/swiper/views/Swiper'
+import { TeacherOnlineContainer as TeacherOnline, TakeOrderContainer as TakeOrder } from '../index'
+class TeacherHomeContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,8 +17,8 @@ class HomeContainer extends Component {
   render() {
     return (
       <Home>    
-         <Swiper></Swiper>
-         <div style={ { height: '100%', width: '100%' ,marginTop: '-.12rem'} }>
+        <MySwiper></MySwiper>
+         <div style={ { height: '100%', width: '100%' ,marginTop: '-.05rem'} }>
         <TabBar
           unselectedTintColor="#5e5e5e"
           tintColor="#5d83fe"
@@ -28,7 +28,7 @@ class HomeContainer extends Component {
         >
           <TabBar.Item
             selected={this.state.selectedTab === 'blueTab'}
-            title="寻找老师"
+            title="接单大厅"
             key="1"
             icon={<div style={{
               width: '0',
@@ -49,10 +49,10 @@ class HomeContainer extends Component {
             }}
             data-seed="logId"
           > 
-           <FindTeacher></FindTeacher>
+           <TakeOrder></TakeOrder>
           </TabBar.Item>
           <TabBar.Item
-            title="预约老师"
+            title="老师上线"
             key="2"
             icon={<div style={{
               width: '0',
@@ -74,7 +74,7 @@ class HomeContainer extends Component {
             }}
             data-seed="logId1"
           >
-            <SubscribeTeacher></SubscribeTeacher>
+            <TeacherOnline></TeacherOnline>
           </TabBar.Item>
           </TabBar>
           </div>
@@ -84,4 +84,4 @@ class HomeContainer extends Component {
   
 }
 
-export default HomeContainer
+export default TeacherHomeContainer
