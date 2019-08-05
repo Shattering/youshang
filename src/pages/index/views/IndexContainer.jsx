@@ -21,26 +21,22 @@ class IndexContainer extends Component {
     this.routes = [
       {
         path:'/',
-        img:'images/syw@2x.jpg',
-        imgActive:'images/syd@2x.jpg',
+        icon:'&#xe61e;',
         name:'首页'
       },
       {
         path:'/timetable',
-        img:'images/kcw@2x.jpg',
-        imgActive:'images/kcd@2x.jpg',
+        icon:'&#xe651;',
         name:'课程表'
       },
       {
         path:'/message',
-        img:'images/xxw@2x.jpg',
-        imgActive:'images/xxd@2x.jpg',
+        icon:'&#xe600;',
         name:'消息'
       },
       {
         path:'/mine',
-        img:'images/wdw@2x.jpg',
-        imgActive:'images/wdd@2x.jpg',
+        icon:'&#xe608;',
         name:'我的'
       },
     ]

@@ -20,16 +20,18 @@ const NavItem = styled.div`
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  img{
-    width:.22rem;
-    height:.22rem;
+  .iconfont{
+    font-size:.19rem;
+  }
+  .active{
+    color:#2492EB;
   }
   span{
     font-weight:400;
     font-size:.12rem;
-    line-height:.18rem;
+    line-height:.14rem;
     transform:scale(0.8);
-    color:rgba(53,53,53,1);
+    color:#353535;
   }
 `
 

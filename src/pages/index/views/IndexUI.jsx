@@ -25,17 +25,22 @@ export default (props) => {
       </Main>
       <Nav>
         {
-          props.routes.map((item,index)=>(
-            <NavItem 
-              onClick={ props.changeRoute.bind(this,index,item.path)} 
-              key={item.name}
-            >
-              <img src={props.currentIndex === index?item.imgActive:item.img} alt="" />
-              <span style={props.currentIndex === index?{color:"#2492EB"}:{color:"#353535"}}>
-                {item.name}
-              </span>
-            </NavItem>
-          ))
+          props.routes.map((item,index)=>{
+            return (
+              <NavItem 
+                key={item.name}
+                onClick={ props.changeRoute.bind(this,index,item.path)} 
+              >
+                <i 
+                  className={props.currentIndex === index? 'iconfont active' : 'iconfont'}
+                  dangerouslySetInnerHTML={{ __html: item.icon }}
+                />
+                <span className={props.currentIndex === index? 'active' : ''}>
+                  {item.name}
+                </span>
+              </NavItem>
+            )
+          })
         }
       </Nav>
     </Index>
