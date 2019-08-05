@@ -5,7 +5,6 @@ const Index = styled.div`
   flex-direction:column;
   height:100%;
   width:100%;
-  
 `
 const Main = styled.div`
   flex:1;
@@ -14,7 +13,6 @@ const Nav = styled.div`
   height:.49rem;
   background:#fff;
   display:flex;
-  z-index: 99999;
 `
 const NavItem = styled.div`
   flex:1;
@@ -26,12 +24,18 @@ const NavItem = styled.div`
     width:.22rem;
     height:.22rem;
   }
+  .iconfont{
+    font-size:.19rem;
+  }
+  .active{
+    color:#2492EB;
+  }
   span{
     font-weight:400;
     font-size:.12rem;
-    line-height:.18rem;
+    line-height:.14rem;
     transform:scale(0.8);
-    color:rgba(53,53,53,1);
+    color:#353535;
   }
 `
 

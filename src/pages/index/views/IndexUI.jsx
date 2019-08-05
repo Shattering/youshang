@@ -16,7 +16,7 @@ export default (props) => {
     <Index>
       <Main>
         <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/home" component={Home}/>
           <Route path="/timetable" component={Timetable}/>
           <Route path="/message" component={Message}/>
           <Route path="/mine" component={Mine}/>

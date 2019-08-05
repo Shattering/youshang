@@ -1639,8 +1639,13 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
 
 antd-mobile@^2.2.14:
   version "2.2.14"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/antd-mobile/download/antd-mobile-2.2.14.tgz#0c3b4da1ef383799ec33f268786860e9cc4533d7"
   integrity sha1-DDtNoe84N5nsM/JoeGhg6cxFM9c=
+=======
+  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-2.2.14.tgz#0c3b4da1ef383799ec33f268786860e9cc4533d7"
+  integrity sha512-qbmVjV4L2z/PCBvkrU7QxTHTsFlxDF2s4V5Wvc5/FPmC50ycQPga2D/9GeAhV6hiijnyS/1sOl8nZ604u99BEw==
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   dependencies:
     array-tree-filter "~2.1.0"
     babel-runtime "6.x"
@@ -2046,7 +2051,11 @@ babel-preset-react-app@^9.0.0:
     babel-plugin-macros "2.5.1"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
+<<<<<<< HEAD
 babel-runtime@6.x, babel-runtime@^6.0.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+=======
+babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -2099,6 +2108,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+<<<<<<< HEAD
 better-scroll@^1.15.2:
   version "1.15.2"
   resolved "https://registry.npm.taobao.org/better-scroll/download/better-scroll-1.15.2.tgz#65ffc6058b8b4ff337b8dfad4bcb334d7699ceb6"
@@ -2106,6 +2116,8 @@ better-scroll@^1.15.2:
   dependencies:
     babel-runtime "^6.0.0"
 
+=======
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
@@ -2822,7 +2834,11 @@ core-js@3.0.1:
 
 core-js@^1.0.0:
   version "1.2.7"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-1.2.7.tgz?cache=0&sync_timestamp=1560599811627&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+=======
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
 core-js@^2.4.0:
@@ -2925,7 +2941,11 @@ crypto-browserify@^3.11.0:
 
 css-animation@1.x, css-animation@^1.3.2:
   version "1.6.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/css-animation/download/css-animation-1.6.1.tgz?cache=0&sync_timestamp=1564456765426&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-animation%2Fdownload%2Fcss-animation-1.6.1.tgz#162064a3b0d51f958b7ff37b3d6d4de18e17039e"
+=======
+  resolved "https://registry.npm.taobao.org/css-animation/download/css-animation-1.6.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-animation%2Fdownload%2Fcss-animation-1.6.1.tgz#162064a3b0d51f958b7ff37b3d6d4de18e17039e"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-FiBko7DVH5WLf/N7PW1N4Y4XA54=
   dependencies:
     babel-runtime "6.x"
@@ -3412,7 +3432,11 @@ doctrine@^3.0.0:
 
 dom-align@1.x, dom-align@^1.7.0:
   version "1.10.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/dom-align/download/dom-align-1.10.1.tgz#515e7469b78a69ab8ff0adb5f866d0840467a6bb"
+=======
+  resolved "https://registry.npm.taobao.org/dom-align/download/dom-align-1.10.1.tgz?cache=0&sync_timestamp=1564200710143&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdom-align%2Fdownload%2Fdom-align-1.10.1.tgz#515e7469b78a69ab8ff0adb5f866d0840467a6bb"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-UV50abeKaauP8K21+GbQhARnprs=
 
 dom-converter@^0.2:
@@ -5289,7 +5313,11 @@ isobject@^3.0.0, isobject@^3.0.1:
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/isomorphic-fetch/download/isomorphic-fetch-2.2.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fisomorphic-fetch%2Fdownload%2Fisomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+=======
+  resolved "https://registry.npm.taobao.org/isomorphic-fetch/download/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
   dependencies:
     node-fetch "^1.0.1"
@@ -8154,7 +8182,11 @@ rc-gesture@~0.0.18, rc-gesture@~0.0.22:
 
 rc-slider@~8.2.0:
   version "8.2.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/rc-slider/download/rc-slider-8.2.0.tgz#ae37d17144cad60e1da6eac0ee4ffcfea0b0a6e8"
+=======
+  resolved "https://registry.npm.taobao.org/rc-slider/download/rc-slider-8.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frc-slider%2Fdownload%2Frc-slider-8.2.0.tgz#ae37d17144cad60e1da6eac0ee4ffcfea0b0a6e8"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-rjfRcUTK1g4dpurA7k/8/qCwpug=
   dependencies:
     babel-runtime "6.x"
@@ -8198,9 +8230,15 @@ rc-trigger@^2.2.2:
     react-lifecycles-compat "^3.0.4"
 
 rc-util@4.x, rc-util@^4.0.4, rc-util@^4.4.0, rc-util@^4.8.0:
+<<<<<<< HEAD
   version "4.8.4"
   resolved "https://registry.npm.taobao.org/rc-util/download/rc-util-4.8.4.tgz#e7baa462ed2647bd478745a9aec7353c0944813a"
   integrity sha1-57qkYu0mR71Hh0Wprsc1PAlEgTo=
+=======
+  version "4.8.7"
+  resolved "https://registry.npm.taobao.org/rc-util/download/rc-util-4.8.7.tgz#d4b086c8b427bec7b86dcfab8c64290aac9ad594"
+  integrity sha1-1LCGyLQnvse4bc+rjGQpCqya1ZQ=
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   dependencies:
     add-dom-event-listener "^1.1.0"
     babel-runtime "6.x"
@@ -8816,7 +8854,11 @@ rmc-cascader@~5.0.0:
 
 rmc-date-picker@^6.0.8:
   version "6.0.10"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/rmc-date-picker/download/rmc-date-picker-6.0.10.tgz?cache=0&sync_timestamp=1564452949984&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frmc-date-picker%2Fdownload%2Frmc-date-picker-6.0.10.tgz#34dc7dfd424248be2d43527421576247c31583f6"
+=======
+  resolved "https://registry.npm.taobao.org/rmc-date-picker/download/rmc-date-picker-6.0.10.tgz#34dc7dfd424248be2d43527421576247c31583f6"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-NNx9/UJCSL4tQ1J0IVdiR8MVg/Y=
   dependencies:
     babel-runtime "6.x"
@@ -10747,7 +10789,11 @@ yargs@^12.0.2:
 
 zscroller@~0.4.0:
   version "0.4.8"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/zscroller/download/zscroller-0.4.8.tgz#69eed68690808eedf81f9714014356b36cdd20f4"
+=======
+  resolved "https://registry.npm.taobao.org/zscroller/download/zscroller-0.4.8.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzscroller%2Fdownload%2Fzscroller-0.4.8.tgz#69eed68690808eedf81f9714014356b36cdd20f4"
+>>>>>>> 737da7f129ad410b7490949697b089d7361e00ac
   integrity sha1-ae7WhpCAju34H5cUAUNWs2zdIPQ=
   dependencies:
     babel-runtime "6.x"

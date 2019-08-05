@@ -1,13 +1,9 @@
-import {
-    combineReducers
-  } from 'redux'
-  
-//   import { reducer as foodlist } from 'cookbook/swiper/'
-//   import { reducer as menulist } from 'cookbook/hot-categories/'
-  
-  const reducer = combineReducers({
-    // foodlist,
-    // menulist
-  })
-  
-  export default reducer
+import { combineReducers } from 'redux'
+
+import wxReady from 'api/wx-api/reducer'
+
+const reducer = combineReducers({ 
+  wxReady
+})
+
+export default reducer
