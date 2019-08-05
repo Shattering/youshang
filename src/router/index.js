@@ -2,19 +2,23 @@ import React from 'react';
 import { BrowserRouter as Router , Switch, Route} from 'react-router-dom'
 
 import { IndexContainer as Index } from 'pages/index/'
-import Detail from 'pages/mine/detail/Detail'
-import Set from 'pages/mine/set/Set'
 
-function AppRouter() {
+import {SettingContainer} from '../pages/setting/index'
+import {OrderContainer} from '../pages/order/index'
+import {PersonalContainer} from '../pages/personal/index'
+
+
+function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/mine/detail' component={Detail}/>
-        <Route path='/mine/set' component={Set}/>
-        <Route path='/' component={Index}/>
+        <Route path="/mine/personal"  component={PersonalContainer}></Route>
+        <Route path="/mine/order"  component={OrderContainer}></Route>
+        <Route path="/mine/setting"  component={SettingContainer}></Route>
+        <Route path="/"  component={Index}></Route>
       </Switch>
     </Router>
   );
 }
 
-export default AppRouter;
+export default App;

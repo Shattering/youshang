@@ -14,7 +14,6 @@ import {
 export default (props) => {
   return(
     <Index>
-    {console.log(props)}
       <Main>
         <Switch>
           <Route exact path="/" component={Home}/>
