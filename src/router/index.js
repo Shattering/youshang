@@ -3,20 +3,23 @@ import { BrowserRouter as Router , Switch, Route} from 'react-router-dom'
 
 import { IndexContainer as Index } from 'pages/index/'
 import { GuidepageContainer as Guidepage } from 'pages/guidepage/'
-import Detail from 'pages/mine/detail/Detail'
-import Set from 'pages/mine/set/Set'
+import { SettingContainer as Setting } from '../pages/setting/index'
+import { OrderContainer as Order } from '../pages/order/index'
+import { PersonalContainer as Personal } from '../pages/personal/index'
 
-function AppRouter() {
+
+function App() {
   return (
     <Router>
       <Switch>
         <Route path='/' exact component={Guidepage}/>
-        <Route path='/mine/detail' component={Detail}/>
-        <Route path='/mine/set' component={Set}/>
-        <Route path='/' component={Index}/>
+        <Route path="/mine/personal"  component={Personal}></Route>
+        <Route path="/mine/order"  component={Order}></Route>
+        <Route path="/mine/setting"  component={Setting}></Route>
+        <Route path="/"  component={Index}></Route>
       </Switch>
     </Router>
   );
 }
 
-export default AppRouter;
+export default App;
