@@ -33,7 +33,7 @@ const Online = styled.div`
   .sliders{
     background-color: #fff;
     border-radius: .1rem;
-    padding: 0 .12rem;
+    padding: 0 .12rem .17rem;
     .ant-slider-handle {
     position: absolute;
     width: 18px;
@@ -58,7 +58,7 @@ const Online = styled.div`
     }
 
     .time-sliders-tip{
-       padding-top: .36rem;
+       padding-top: .3rem;
        display: flex;
        align-items: center;
        font-size: .16rem;

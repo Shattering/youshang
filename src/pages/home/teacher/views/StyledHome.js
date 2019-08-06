@@ -3,6 +3,9 @@ import styled from 'styled-components'
 const Home = styled.div`
 /* .sc-ifAKCX */
   height: 100%!important;
+  .am-tab-bar-item {
+    margin-top: .1rem;
+}
 .am-tabs-horizontal .am-tabs-pane-wrap-inactive {
     height: 100%;
     overflow: hidden;
