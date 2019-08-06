@@ -4,12 +4,14 @@ import {
 } from './StyledHome'
 import { TabBar } from 'antd-mobile';
 import MySwiper from 'components/swiper/views/Swiper'
-import { FindTeacherContainer as FindTeacher, SubscribeTeacherContainer as SubscribeTeacher } from '../index'
+import FindTeacherUI from './FindTeacherUI'
+import SubscribeTeacherUI from './SubscribeTeacherUI'
+
 class StudentHomeContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'blueTab',
       hidden: false,
       fullScreen: false,
     };
@@ -49,7 +51,7 @@ class StudentHomeContainer extends Component {
             }}
             data-seed="logId"
           > 
-           <FindTeacher></FindTeacher>
+           <FindTeacherUI></FindTeacherUI>
           </TabBar.Item>
           <TabBar.Item
             title="预约老师"
@@ -74,7 +76,7 @@ class StudentHomeContainer extends Component {
             }}
             data-seed="logId1"
           >
-            <SubscribeTeacher></SubscribeTeacher>
+            <SubscribeTeacherUI></SubscribeTeacherUI>
           </TabBar.Item>
           </TabBar>
           </div>

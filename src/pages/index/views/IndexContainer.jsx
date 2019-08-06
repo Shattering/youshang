@@ -16,7 +16,8 @@ class IndexContainer extends Component {
     super(props);
     // 这边绑定是必要的，这样 `this` 才能在回调函数中使用
     this.state = {
-      currentIndex : 0
+      currentIndex : 0,
+      type: this.props.location.state.type
     };
     this.routes = [
       {
@@ -64,6 +65,7 @@ class IndexContainer extends Component {
   render() {
     return (
       <IndexUI 
+        type = {this.state.type}
         routes = { this.routes }
         currentIndex = { this.state.currentIndex }
         changeRoute = { this.changeRoute }

@@ -4,7 +4,9 @@ import {
 } from './StyledHome'
 import { TabBar } from 'antd-mobile';
 import MySwiper from 'components/swiper/views/Swiper'
-import { TeacherOnlineContainer as TeacherOnline, TakeOrderContainer as TakeOrder } from '../index'
+import TeacherOnlineContainer from './TeacherOnline/TeacherOnlineContainer'
+import TakeOrderUI from './TakeOrderUI'
+
 class TeacherHomeContainer extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ class TeacherHomeContainer extends Component {
             }}
             data-seed="logId"
           > 
-           <TakeOrder></TakeOrder>
+           <TakeOrderUI></TakeOrderUI>
           </TabBar.Item>
           <TabBar.Item
             title="老师上线"
@@ -74,7 +76,7 @@ class TeacherHomeContainer extends Component {
             }}
             data-seed="logId1"
           >
-            <TeacherOnline></TeacherOnline>
+            <TeacherOnlineContainer></TeacherOnlineContainer>
           </TabBar.Item>
           </TabBar>
           </div>
