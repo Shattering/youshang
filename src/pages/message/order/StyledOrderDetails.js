@@ -18,6 +18,30 @@ const Header = styled.div`
   font-weight : 400;
   font-size : .17rem;
   margin-bottom : .095rem;
+  position: relative;
+  button{
+    position : absolute;
+    left : .19rem;
+    background : #2492EB;
+    border : none;
+    display : block;
+  }
+  span{
+    position: absolute;
+    left : 2.47rem;
+    top : .14rem;
+    z-index : 1;
+    display : block;
+    width : 1.28rem;
+    font-size : .16rem;
+    font-family : PingFangSC-Heavy;
+    font-weight : 400;
+    color : #fff;
+    text-align : right;
+    height : .16rem;
+    line-height : .16rem;
+    padding-right : .175rem;
+  }
 `
 
 const Ul = styled.ul`

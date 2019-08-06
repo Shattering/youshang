@@ -7,11 +7,22 @@ import {
   Span,
   I
 } from './StyledOrderDetails'
+import {
+  Link
+} from 'react-router-dom'
 
 export default () => {
   return(
     <Order>
-        <Header>订单详情</Header>
+        <Header>
+          <button>
+            《
+          </button>
+          订单详情
+          <Link to="/message/chat">
+            <span>联系老师</span>
+          </Link>
+        </Header>
         <Ul>
           <Li>
             <Span>距离上课时间</Span>

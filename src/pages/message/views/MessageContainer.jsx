@@ -6,7 +6,8 @@ import OrderCenterUI from '../order/OrderCenterUI'
 class MessageContainer extends Component {
   render() {
     return (
-      <MessageUI></MessageUI>
+      // <MessageUI></MessageUI>
+      <OrderDetailsUI></OrderDetailsUI>
       // <OrderCenterUI></OrderCenterUI>
     )
   }
