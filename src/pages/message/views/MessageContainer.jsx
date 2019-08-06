@@ -7,8 +7,8 @@ class MessageContainer extends Component {
   render() {
     return (
       // <MessageUI></MessageUI>
-      <OrderDetailsUI></OrderDetailsUI>
-      // <OrderCenterUI></OrderCenterUI>
+      // <OrderDetailsUI></OrderDetailsUI>
+      <OrderCenterUI></OrderCenterUI>
     )
   }
 }

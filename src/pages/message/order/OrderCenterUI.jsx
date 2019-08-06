@@ -1,33 +1,35 @@
 import React from 'react'
 import {
-  Order,
+  OrderCenter,
   Header,
-  Ul,
-  Li,
 } from './StyledOrderCenter'
 
 export default () => {
   return(
-    <Order>
-        <Header>订单中心</Header>
-        <Ul>
-          <Li>
-            <img src="" alt=""/>
-            <div className= 'OrderCenter'>
-              <div className = 'OrderCenterTop'>
-                <div className = 'left'>
-
-                </div>
-                <div className = 'right'>
-
-                </div>
+    <OrderCenter>
+      <Header>订单中心</Header>
+      <ul>
+        <li>
+          <img src="images/dingdan.png" alt=""/>
+          <div className = 'orderbody'>
+            <div className = 'bodytop'>
+              <div>
+                <span>
+                  徐小明 小学
+                </span>
+                <span>
+                  已完成
+                </span>
               </div>
-              <div className = 'OrderCenterBottom'>
-                <h3></h3>
-              </div>
+              科目：<span>语文</span>
+              时间：<p>6月1 19:00-20:30 1.5小时</p>
             </div>
-          </Li>
-        </Ul>
-      </Order>
+            <div className = 'bodybottom'>
+            价格：<span> ￥120</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </OrderCenter>
   )
 }

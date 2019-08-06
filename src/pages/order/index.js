@@ -1,3 +1,5 @@
 import OrderContainer from './views/OrderContainer'
 
-export {OrderContainer}
+export {
+  OrderContainer
+}
