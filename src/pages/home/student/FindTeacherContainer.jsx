@@ -4,7 +4,7 @@ class FindTeacherContainer extends React.Component{
     render() {
         return(
          <>
-         <div>Findeitem</div>
+         {/* <div>Findeitem</div> */}
          <FindItem></FindItem>
          </>
         )

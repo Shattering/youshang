@@ -1,27 +1,17 @@
 import React from 'react'
 import {
   Order,
-  Header,
   Ul,
   Li,
   Span,
   I
 } from './styledOrder'
-import {
-  Link
-} from 'react-router-dom'
+import Header from '../../../components/header/Header'
 
 export default () => {
   return(
     <Order>
-        <Header>
-          <button>
-            《
-          </button>
-          订单详情
-          <Link to="/message/chat">
-            <span>联系老师</span>
-          </Link>
+        <Header name= '订单详情' link = '联系老师' to = '/message/chat'> 
         </Header>
         <Ul>
           <Li>

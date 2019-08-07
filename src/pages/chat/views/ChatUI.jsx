@@ -1,13 +1,13 @@
 import React from 'react'
 import {
   ChatMessage,
-  Header,
 } from './StyleChat'
+import Header from '../../../components/header/Header'
 
 export default () => {
   return(
     <ChatMessage>
-      <Header>聊天详情</Header>
+      <Header name = '聊天详情'></Header>
     </ChatMessage>
   )
 }
