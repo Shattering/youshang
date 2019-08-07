@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router , Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router , Switch, Route , Redirect } from 'react-router-dom'
 
 import { IndexContainer as Index } from 'pages/index/'
 import { GuidepageContainer as Guidepage } from 'pages/guidepage/'
@@ -12,11 +12,12 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/' exact component={Guidepage}/>
+        <Route path='/guidepage' exact component={Guidepage}/>
         <Route path="/mine/personal"  component={Personal}></Route>
-        <Route path="/mine/order"  component={Order}></Route>
+        <Route path="/order"  component={Order}></Route>
         <Route path="/mine/setting"  component={Setting}></Route>
-        <Route path="/"  component={Index}></Route>
+        <Redirect to="/guidepage" from="/" exact />
+        <Route path="/" component={Index}></Route>
       </Switch>
     </Router>
   );

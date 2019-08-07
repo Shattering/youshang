@@ -25,6 +25,7 @@ const NavItem = styled.div`
     height:.22rem;
   }
   .iconfont{
+    color:#bdbdbd;
     font-size:.19rem;
   }
   .active{
