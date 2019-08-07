@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { StudentHomeContainer as StudentHome } from 'pages/home/'
-//import { TeacherHomeContainer as TeacherHome } from 'pages/home/'
+import { TeacherHomeContainer as TeacherHome } from 'pages/home/'
 import { TimetableContainer as Timetable } from 'pages/timetable/'
 import { MessageContainer as Message } from 'pages/message/'
 import { MineContainer as Mine } from 'pages/mine/'
@@ -13,15 +13,29 @@ import {
 } from './StyledIndex'
 
 export default (props) => {
+
   return (
     <Index>
       <Main>
-        <Switch>
-          <Route exact path="/home" component={StudentHome} />
-          <Route path="/timetable" component={Timetable} />
-          <Route path="/message" component={Message} />
-          <Route path="/mine" component={Mine} />
-        </Switch>
+        
+
+          { props.type=== 0? 
+
+              ( <Switch>
+                <Route exact path="/home" component={StudentHome} />
+                <Route path="/timetable" component={Timetable} />
+                <Route path="/message" component={Message} />
+                <Route path="/mine" component={Mine} />
+                </Switch>
+              )
+              :
+              (<Switch> 
+                <Route exact path="/home" component={TeacherHome} />
+                <Route path="/timetable" component={Timetable} />
+                <Route path="/message" component={Message} />
+                <Route path="/mine" component={Mine} />
+              </Switch>)
+          }  
       </Main>
       <Nav>
         {
