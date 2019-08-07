@@ -19,12 +19,12 @@ const Header = styled.div`
   font-size : .17rem;
   margin-bottom : .095rem;
   position: relative;
-  button{
-    position : absolute;
-    left : .19rem;
-    background : #2492EB;
-    border : none;
-    display : block;
+  img{
+    position:absolute;
+    left:.19rem;
+    margin-top:.145rem;
+    height:.15rem;
+    width:.09rem;
   }
   span{
     position: absolute;
