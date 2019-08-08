@@ -11,9 +11,11 @@ import {
   P
 } from './StyledMessage'
 
+
 export default () => {
   return(
     <Message className = 'message'>
+        {/* <Header name = '消息'></Header> */}
         <Header>消息</Header>
         <Ul>
           <Li>

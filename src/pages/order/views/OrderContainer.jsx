@@ -1,10 +1,10 @@
 import React,{Component} from 'react'
-import SettingUI from './OrderUI'
+import OrderUI from './OrderUI'
 
 class OrderContainer extends Component{
     render(){
         return (
-            <SettingUI></SettingUI>
+            <OrderUI></OrderUI>
         )
     }
 }
