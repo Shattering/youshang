@@ -13,13 +13,13 @@ import {
 } from './StyledIndex'
 
 export default (props) => {
-
+  console.log(props)
   return (
     <Index>
       <Main>
         
 
-          { props.type=== 0? 
+          { props.type=== '0'? 
 
               ( <Switch>
                 <Route exact path="/home" component={StudentHome} />
