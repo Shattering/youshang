@@ -27,12 +27,12 @@ export default (props) => {
                   <div className="choose">
                     <p>
                       <button onClick={()=>{
-                        props.history.push('/home',{
+                        props.history.push('/index/home',{
                           type:0
                         })
                       }}>学生</button>
                       <button onClick={()=>{
-                        props.history.push('/home',{
+                        props.history.push('/index/home',{
                           type:1
                         })
                       }}>老师</button>

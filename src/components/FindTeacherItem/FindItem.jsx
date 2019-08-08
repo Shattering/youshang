@@ -15,7 +15,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
@@ -26,7 +26,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
@@ -37,7 +37,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
@@ -59,7 +59,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
@@ -70,7 +70,7 @@ class FindItem extends React.Component {
                                 <li className="item-right"><i>￥145</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>徐小明</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>徐小明</li>
                                 <li className="item-right km"> 1.5km</li>
                             </ul>
                         </div>
