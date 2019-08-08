@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Order = styled.div`
+const ChatMessage = styled.div`
   widows : 100%;
   height : 100%;
   display : flex;
@@ -19,28 +19,9 @@ const Header = styled.div`
   font-size : .17rem;
 `
 
-const Ul = styled.ul`
-  width : 100%;
-  padding-left : .175rem;
-  padding-right : .17rem;
-  margin-top : .525rem;
-`
 
-const Li = styled.li`
-  width : 100%;
-  background : #fff;
-  height : 1.05rem;
-  margin-bottom : .045rem;
-`
-
-
-const Img = styled.img`
-
-`
 
 export {
-  Order,
-  Header,
-  Ul,
-  Li,
+  ChatMessage,
+  Header
 }

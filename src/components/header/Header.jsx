@@ -17,17 +17,16 @@ class Header extends Component{
     render(){
         return (
             <StyledHeader>
-                <div className="fill"></div>
                 <div className="head">
                     <p>
                         <img onClick={this.handleBackClick} alt="" src={`${back}`} />
                         {this.props.name}
-
+                        <span onClick = {()=>{
+                        this.props.history.push(this.props.to)
+                      }}>{this.props.link}</span>
                     </p>
                 </div>
-                
             </StyledHeader>
-           
         )
     }
     handleBackClick(){

@@ -18,18 +18,18 @@ export default (props) => {
       <Main>
         { props.type === 0? 
           ( <Switch>
-              <Route path="/home" component={StudentHome} />
-              <Route path="/timetable" component={Timetable} />
-              <Route path="/message" component={Message} />
-              <Route path="/mine" component={Mine} />
+              <Route exact path="/index/home" component={StudentHome} />
+              <Route path="/index/timetable" component={Timetable} />
+              <Route path="/index/message" component={Message} />
+              <Route path="/index/mine" component={Mine} />
             </Switch>
           )
           :
           (<Switch> 
-            <Route path="/home" component={TeacherHome} />
-            <Route path="/timetable" component={Timetable} />
-            <Route path="/message" component={Message} />
-            <Route path="/mine" component={Mine} />
+            <Route exact path="/index/home" component={TeacherHome} />
+            <Route path="/index/timetable" component={Timetable} />
+            <Route path="/index/message" component={Message} />
+            <Route path="/index/mine" component={Mine} />
           </Switch>)
         }  
       </Main>
