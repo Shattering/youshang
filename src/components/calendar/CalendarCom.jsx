@@ -61,19 +61,13 @@ export default class WebCalendar extends Component {
 
     async componentDidMount() {
         this.result = await ajax('/api/courseplan')
-        console.log(localStorage.type)
         if(localStorage.type === '0' ) {
             this.result = this.result[0].plan
         }
         if(localStorage.type === '1' ) {
             this.result = this.result[1].plan
         }
-        const showDate = this.props.showDate;// 选中的日期
-        if (showDate) {
-            this.initCalendar(new Date(showDate));
-        } else {
-            this.initCalendar();
-        }
+        this.initCalendar();
     }
 
 
@@ -146,13 +140,6 @@ export default class WebCalendar extends Component {
             if (date.toDateString() === new Date().toDateString()) {
                 // dayObject.className = 'today';
                 dayObject.isdefault = 1;
-            }
-            const showDate = this.props.showDate;
-            if (showDate) {
-                // 滚动的选中了日期  大日历也需要修改数据
-                if (dayObject.date === showDate) {
-                    dayObject.status = 1;
-                }
             }
             if (dayObject.currMonth === 0) {
                 dayObject.day = ''
@@ -228,17 +215,6 @@ export default class WebCalendar extends Component {
                     dayList: [...dayList]
                 });
             }
-            // console.log('item.date', item.date);
-            // dayList[clickIndex].status = 0;
-            // dayList[index].status = 1;
-            // this.clickIndex = index;
-            // this.setState({
-            //     dayList:[...dayList]
-            // });
-        }
-        const onSelect = this.props.onSele;
-        if (onSelect && typeof onSelect === 'function') {
-            onSelect(item.date);
         }
         this.initItemList(item.date)
     }
@@ -261,11 +237,9 @@ export default class WebCalendar extends Component {
         let res = this.startX - this.endX
         if( res  >0 && res >  window.innerWidth/3){
             this.nextMonth()
-            console.log(res)
         }
         if( res < 0 && res <  -window.innerWidth/3){
             this.preMonth()
-            console.log(res)
         }
     }
 
