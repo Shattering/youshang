@@ -13,8 +13,7 @@ import { OrderCenterContainer as OrderCenter } from '../pages/ordercenter/index'
 
 import { SettingContainer } from '../pages/setting/index'
 import { OrderContainer } from '../pages/order/index'
-import { PersonalContainer } from '../pages/personal/index'
-import { VerificationCodeLogin } from '../pages/login/VerificationCodeLogin';
+import { VerificationCodeLogin as vcl } from '../pages/login/VerificationCodeLogin';
 import { PasswordLogin } from '../pages/login/PasswordLogin'
 import { ForgetCode } from '../pages/forgetCode/index'
 import { SignIn } from '../pages/signin/index'
@@ -29,11 +28,9 @@ function App() {
         <Route path="/ordercenter"  component={OrderCenter}></Route>
         <Route path="/mine/setting"  component={Setting}></Route>
         <Route path="/message/chat"  component={Chat}></Route>
-        <Route path="/"  component={Index}></Route>
-        <Route path="/mine/personal"  component={ PersonalContainer }></Route>
         <Route path="/mine/order"  component={ OrderContainer }></Route>
         <Route path="/mine/setting"  component={ SettingContainer }></Route>
-        <Route path="/verificationcodelogin"  component={ VerificationCodeLogin }></Route>
+        <Route path="/verificationcodelogin"  component={ vcl }></Route>
         <Route path="/passwordlogin" component={ PasswordLogin }></Route>
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
