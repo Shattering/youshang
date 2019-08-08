@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import http from '../../utils/http'
+import ajax from '../../utils/ajax'
 
 // import style from './style.use.less';
 import CalendarUI from './CalendarUI.js';
@@ -60,7 +60,7 @@ export default class WebCalendar extends Component {
     }
 
     async componentDidMount() {
-        this.result = await http('/api/courseplan')
+        this.result = await ajax('/api/courseplan')
         this.result = this.result[0].plan
 
         const showDate = this.props.showDate;// 选中的日期
