@@ -34,7 +34,7 @@ const StyledFindItem = styled.div`
 }
 .find-item-wrap ul .name{
    
-    font-weight:300;
+    font-weight:500;
 }
 .find-item-wrap ul .name img{
   height: .26rem;

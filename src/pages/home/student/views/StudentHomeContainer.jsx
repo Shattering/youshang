@@ -18,9 +18,7 @@ class StudentHomeContainer extends Component {
     }; 
     
   }
-  render() {
-    console.log(this.state.findTeacherlist  );
-    
+  render() { 
     return (
       <Home>    
         <MySwiper></MySwiper>

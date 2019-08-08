@@ -2,12 +2,13 @@
 import React from 'react'
 import StyledFindItem from './StyledFindItem'
 export default (props) => {
+    // console.log(props.toSubscribe)
         return (
             <StyledFindItem>
-                <div id="scroll-wrap-find">
-                    <div> 
-                   {props.list ? props.list.map( item =>(                                                                                             
-                       <div key={item.oid} className="find-item-wrap" >
+                <div id="scroll-wrap-find" >
+                    <div > 
+                   {props.list&&props.toSubscribe ? props.list.map( item =>(                                                                                             
+                       <div key={item.oid} className="find-item-wrap"  onClick={props.toSubscribe.bind(this, item.oid)}>
                             <p>{item.content} </p>
                             <ul>
                                 <li className="item-left">{item.data} {item.starttime}</li>
