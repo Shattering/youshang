@@ -23,6 +23,7 @@ const StyledVerificationCodeLogin = styled.div`
       padding-left:.15rem;
     }
   }
+ 
   form{
     display:block;
     text-align:center;
