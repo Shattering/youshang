@@ -61,8 +61,13 @@ export default class WebCalendar extends Component {
 
     async componentDidMount() {
         this.result = await ajax('/api/courseplan')
-        this.result = this.result[0].plan
-
+        console.log(localStorage.type)
+        if(localStorage.type === '0' ) {
+            this.result = this.result[0].plan
+        }
+        if(localStorage.type === '1' ) {
+            this.result = this.result[1].plan
+        }
         const showDate = this.props.showDate;// 选中的日期
         if (showDate) {
             this.initCalendar(new Date(showDate));
