@@ -4,9 +4,9 @@ import {
 } from './StyledHome'
 import { TabBar } from 'antd-mobile';
 import MySwiper from 'components/swiper/views/Swiper'
-import FindTeacherUI from './FindTeacherUI'
+import FindItemContainer from 'components/FindTeacherItem/FindItemContainer'
 import SubscribeTeacherUI from './SubscribeTeacherUI'
-
+import{ http} from 'utils/http.js'
 class StudentHomeContainer extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +14,9 @@ class StudentHomeContainer extends Component {
       selectedTab: 'blueTab',
       hidden: false,
       fullScreen: false,
-    };
+      findTeacherlist: []
+    }; 
+    
   }
   render() {
     console.log(this.props);
@@ -52,7 +54,11 @@ class StudentHomeContainer extends Component {
             }}
             data-seed="logId"
           > 
-           <FindTeacherUI></FindTeacherUI>
+           
+           <FindItemContainer 
+           list = {this.state.findTeacherlist.length ? this.state.findTeacherlist : ''}
+           > 
+           </FindItemContainer>
           </TabBar.Item>
           <TabBar.Item
             title="预约老师"
@@ -86,6 +92,15 @@ class StudentHomeContainer extends Component {
     )
   }
   
+ async componentDidMount() {
+      await http().then( response => {
+         this.setState({
+          findTeacherlist: response.data.data.subscribelist 
+         })
+        
+      })
+     
+  }
 }
 
 export default StudentHomeContainer

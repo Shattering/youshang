@@ -17,7 +17,7 @@ class IndexContainer extends Component {
     // 这边绑定是必要的，这样 `this` 才能在回调函数中使用
     this.state = {
       currentIndex : 0,
-      type: this.props.location.state.type
+      type: this.props.location.state ? this.props.location.state.type : localStorage.type
     };
     this.routes = [
       {
