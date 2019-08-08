@@ -26,9 +26,9 @@ export default class WebCalendar extends Component {
         this.clickGroupIndex = -1; // 点击的组的index
         this.changeMonthIndex = 0;
         this.state = {
-            currentDay: '',
-            currentMonth: '',
-            currentYear: '',
+            currentDay: new Date().getDate(),
+            currentMonth: new Date().getMonth() + 1 >= 10 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1),
+            currentYear: new Date().getFullYear(),
             weekList: [
                 { name: '周一', className: '' },
                 { name: '周二', className: '' },
@@ -40,6 +40,7 @@ export default class WebCalendar extends Component {
             ],
             dayList: []
         };
+        this.today = this.state.currentYear + '/' +this.state.currentMonth +'/' +this.state.currentDay
 
         this.initCalendar = this.initCalendar.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
@@ -50,7 +51,7 @@ export default class WebCalendar extends Component {
         this.onTouchStart()
     }
 
-    componentWillMount() {
+     componentWillMount() {
         // style.use() // 需要配置loader 可以直接注释 忽略掉  实现每个模块卸载之后 css也会销毁 
     }
 
@@ -67,7 +68,8 @@ export default class WebCalendar extends Component {
         if(localStorage.type === '1' ) {
             this.result = this.result[1].plan
         }
-        this.initCalendar();
+        this.initCalendar(new Date(this.today))
+        this.initItemList(this.today)
     }
 
 
@@ -181,6 +183,7 @@ export default class WebCalendar extends Component {
             const date = new Date(`${this.state.currentYear}/${this.state.currentMonth}/${this.state.currentDay}`);
             this.hidd = !this.hidd
             this.initCalendar(date)
+            console.log(date)
         }
     }
 
@@ -226,7 +229,6 @@ export default class WebCalendar extends Component {
                 this.itemList = this.result[key]
             }
         }
-        // console.log(this.itemList)
     }
 
     touchStart(e) {
