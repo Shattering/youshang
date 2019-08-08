@@ -1720,8 +1720,8 @@ antd-mobile@^2.2.14:
 
 antd@^3.21.2:
   version "3.21.2"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-3.21.2.tgz#83232e12ea0257bc6103cf5a23a716290c863831"
-  integrity sha1-gyMuEuoCV7xhA89aI6cWKQyGODE=
+  resolved "https://registry.yarnpkg.com/antd/-/antd-3.21.2.tgz#83232e12ea0257bc6103cf5a23a716290c863831"
+  integrity sha512-KwqFhr7UpZGVCB4l7uZj74LgFVGQqdqLULY9QCGgIubiSFcqPl5dzvIz/bIEdqdiYvS72zX+nD0qmQiI5W95kg==
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"
     "@ant-design/icons" "~2.1.1"
