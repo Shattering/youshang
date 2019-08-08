@@ -192,7 +192,7 @@ img {
 
 a {
   color: #00afc7; }
-
+* { touch-action: none; }
 .g-clear::after,
 .g-mod::after {
   display: block;
