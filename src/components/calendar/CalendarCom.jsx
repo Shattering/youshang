@@ -26,8 +26,8 @@ export default class WebCalendar extends Component {
         this.clickGroupIndex = -1; // 点击的组的index
         this.changeMonthIndex = 0;
         this.state = {
-            currentDay: new Date().getDate(),
-            currentMonth: new Date().getMonth() + 1 >= 10 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1),
+            currentDay: new Date().getDate() >=10 ? new Date().getDate():'0'+new Date().getDate(),
+            currentMonth: new Date().getMonth() + 1,
             currentYear: new Date().getFullYear(),
             weekList: [
                 { name: '周一', className: '' },
@@ -41,7 +41,6 @@ export default class WebCalendar extends Component {
             dayList: []
         };
         this.today = this.state.currentYear + '/' +this.state.currentMonth +'/' +this.state.currentDay
-
         this.initCalendar = this.initCalendar.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.renderBody = this.renderBody.bind(this);
@@ -61,7 +60,7 @@ export default class WebCalendar extends Component {
     }
 
     async componentDidMount() {
-        this.result = await ajax('/api/courseplan')
+        this.result = await ajax('http://10.9.65.236:5500/CoursePlan')
         if(localStorage.type === '0' ) {
             this.result = this.result[0].plan
         }
