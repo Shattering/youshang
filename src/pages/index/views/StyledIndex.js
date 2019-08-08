@@ -7,6 +7,7 @@ const Index = styled.div`
   width:100%;
 `
 const Main = styled.div`
+  overflow:scroll;
   flex:1;
 `
 const Nav = styled.div`
