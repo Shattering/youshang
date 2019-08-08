@@ -17,6 +17,7 @@ class StudentHomeContainer extends Component {
     };
   }
   render() {
+    console.log(this.props);
     return (
       <Home>    
         <MySwiper></MySwiper>
@@ -72,6 +73,7 @@ class StudentHomeContainer extends Component {
             onPress={() => {
               this.setState({
                 selectedTab: 'redTab',
+                // type : this.props.location.state.type
               });
             }}
             data-seed="logId1"

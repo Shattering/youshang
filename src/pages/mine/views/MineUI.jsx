@@ -32,9 +32,9 @@ export default () => {
             </BorderedLI>
 
             <BorderedLI hasBorder={true}>
-              <Link to="/mine/order">
+              <Link to="/ordercenter">
                 <i></i>
-                <div style={{color:"rgba(82,82,82,1)"}} to="/mine/order">订单中心</div>
+                <div style={{color:"rgba(82,82,82,1)"}} to="/ordercenter">订单中心</div>
               </Link>
             </BorderedLI>
 
