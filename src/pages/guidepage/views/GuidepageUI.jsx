@@ -30,11 +30,13 @@ export default (props) => {
                         props.history.push('/index/home',{
                           type:0
                         })
+                        localStorage.setItem('type','0')
                       }}>学生</button>
                       <button onClick={()=>{
                         props.history.push('/index/home',{
                           type:1
                         })
+                        localStorage.setItem('type','1')
                       }}>老师</button>
                     </p>
                   </div>

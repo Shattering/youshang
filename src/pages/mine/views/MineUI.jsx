@@ -15,7 +15,7 @@ export default () => {
       <header>
           <div className="fill"></div>
           <div className="pic">
-              <img src={`${Hello}`} alt="" />
+              <Link to='/verificationcodelogin'><img src={`${Hello}`} alt="" /></Link>
           </div>
           <p className="p1">立即登录</p>
           <p className="p2">登陆/注册后使用更多功能</p>

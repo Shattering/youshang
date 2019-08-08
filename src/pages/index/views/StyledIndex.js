@@ -8,6 +8,7 @@ const Index = styled.div`
 `
 const Main = styled.div`
   height: calc(100% - .49rem)!important;
+  overflow:scroll;
 `
 const Nav = styled.div`
   height:.49rem;

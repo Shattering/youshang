@@ -10,9 +10,9 @@ const StyledFindItem = styled.div`
 .find-item-wrap{
    height: auto;
    background-color: #fff;
-   margin:  .1rem .2rem;
-   padding: .1rem .15rem .15rem;
-   font-family:PingFangSC-Heavy;
+   margin: .08rem .2rem;
+    padding: .1rem .15rem .15rem;
+   font-family:PingFangSC-Heavy; 
 }
 .find-item-wrap p{
     font-size: .18rem;
@@ -34,7 +34,7 @@ const StyledFindItem = styled.div`
 }
 .find-item-wrap ul .name{
    
-    font-weight:300;
+    font-weight:500;
 }
 .find-item-wrap ul .name img{
   height: .26rem;
