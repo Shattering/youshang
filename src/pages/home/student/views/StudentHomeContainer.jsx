@@ -22,7 +22,6 @@ class StudentHomeContainer extends Component {
     return (
       <Home>    
         <MySwiper></MySwiper>
-         <div style={ { height: '100%', width: '100%' ,marginTop: '-.05rem'} }>
         <TabBar
           unselectedTintColor="#5e5e5e"
           tintColor="#5d83fe"
@@ -85,7 +84,6 @@ class StudentHomeContainer extends Component {
             <SubscribeTeacherUI></SubscribeTeacherUI>
           </TabBar.Item>
           </TabBar>
-          </div>
      </Home>
     )
   }
