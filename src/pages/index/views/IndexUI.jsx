@@ -19,7 +19,7 @@ export default (props) => {
       <Main>
         
 
-          { props.type=== '0'? 
+          { props.type == 0? 
 
               ( <Switch>
                 <Route exact path="/home" component={StudentHome} />
