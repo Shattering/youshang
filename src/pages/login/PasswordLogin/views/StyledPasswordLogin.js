@@ -24,6 +24,7 @@ const StyledPasswordLogin = styled.div`
     }
   }
   form{
+    position:relative;
     display:block;
     text-align:center;
     position: relative;
@@ -35,6 +36,13 @@ const StyledPasswordLogin = styled.div`
     input:nth-of-type(2){
       background:url(${password}) no-repeat left center;
       background-size:.22rem .21rem;
+    }
+    img{
+      position:absolute;
+      right:.4rem;
+      top:.65rem;
+      width:.21rem;
+      height:.15rem;
     }
   }
   .login{

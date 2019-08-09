@@ -61,7 +61,7 @@ export default class WebCalendar extends Component {
     }
 
     async componentDidMount() {
-        this.result = await ajax('/api/courseplan')
+        this.result = await ajax('http://10.9.65.236:5500/Courseplan')
         if(localStorage.type === '0' ) {
             this.result = this.result[0].plan
         }

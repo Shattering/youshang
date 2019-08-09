@@ -1,15 +1,26 @@
-import React from 'react'
+import React,{Component} from 'react'
 import LoginHeader from '../../../../components/loginHeader/LoginHeader';
 import {
   StyledPasswordLogin
 } from './StyledPasswordLogin'
 import logo from '../../../../assets/images/LOGO.png'
 import WX from '../../../../assets/images/微信icon.png'
+import eyeClosed from '../../../../assets/images/闭眼.png'
+import eye from '../../../../assets/images/睁眼.png'
 import Input from '../../../../components/input/Input'
 import { Link } from 'react-router-dom'
  
-export default () => {
-  return(
+class PasswordLoginUI extends Component{
+  constructor(props){
+    super(props)
+    this.state=({
+      showPassword:true,
+    })
+    this.handleShowPassword = this.handleShowPassword.bind(this)
+  }
+  
+render(){
+    return(
     <StyledPasswordLogin>
       <LoginHeader name1="密码登录" name2="验证码登录"></LoginHeader>
       <main>
@@ -19,7 +30,8 @@ export default () => {
         </div>
         <form action="post">
           <Input placeholder="请输入手机号"/>
-          <Input placeholder="请输入登录密码"/>
+      bb={this.handleShowPassword} src={`${eyeClosed}`} alt=""/>
+          <Input placeholder="请输入登录密码" type={this.state.showPassword ? "password" : "text"}></Input>
         </form>
         <div className="login">
           <button>登陆</button>
@@ -40,3 +52,13 @@ export default () => {
     </StyledPasswordLogin>
   )
 }
+
+handleShowPassword(){
+  console.log("000")
+  this.setState({
+      showPassword :!this.state.showPassword
+    })
+  }
+}
+
+export default PasswordLoginUI
