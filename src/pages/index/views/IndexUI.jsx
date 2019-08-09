@@ -13,29 +13,25 @@ import {
 } from './StyledIndex'
 
 export default (props) => {
-  console.log(props)
   return (
     <Index>
       <Main>
-        
-
-          { props.type == 0? 
-
-              ( <Switch>
-                <Route exact path="/home" component={StudentHome} />
-                <Route path="/timetable" component={Timetable} />
-                <Route path="/message" component={Message} />
-                <Route path="/mine" component={Mine} />
-                </Switch>
-              )
-              :
-              (<Switch> 
-                <Route exact path="/home" component={TeacherHome} />
-                <Route path="/timetable" component={Timetable} />
-                <Route path="/message" component={Message} />
-                <Route path="/mine" component={Mine} />
-              </Switch>)
-          }  
+        { props.type == 0? 
+          ( <Switch>
+              <Route exact path="/index/home" component={StudentHome} />
+              <Route path="/index/timetable" component={Timetable} />
+              <Route path="/index/message" component={Message} />
+              <Route path="/index/mine" component={Mine} />
+            </Switch>
+          )
+          :
+          (<Switch> 
+            <Route exact path="/index/home" component={TeacherHome} />
+            <Route path="/index/timetable" component={Timetable} />
+            <Route path="/index/message" component={Message} />
+            <Route path="/index/mine" component={Mine} />
+          </Switch>)
+        }  
       </Main>
       <Nav>
         {

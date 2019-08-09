@@ -47,7 +47,7 @@ class IndexContainer extends Component {
     this.setState({
       currentIndex
     });
-    this.props.history.push(path)
+    this.props.history.push(`/index${path}`)
   }
 
   componentWillMount(){
