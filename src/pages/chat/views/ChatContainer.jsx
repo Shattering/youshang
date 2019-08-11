@@ -47,12 +47,11 @@ class ChatContainer extends Component {
   
     this.ws.onmessage = (msg) => {
       let data = JSON.parse(msg.data)
-      console.log()
       let msgList = {
         type:data.type,
         msg:data.msg
       }
-      console.log(msgList)
+      // console.log(msgList)
       this.setState({
         msgList: [...this.state.msgList, msgList]
       })

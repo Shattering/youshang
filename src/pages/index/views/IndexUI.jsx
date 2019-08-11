@@ -16,7 +16,7 @@ export default (props) => {
   return (
     <Index>
       <Main>
-        { props.type == 0? 
+        { parseInt(props.type) === 0? 
           ( <Switch>
               <Route exact path="/index/home" component={StudentHome} />
               <Route path="/index/timetable" component={Timetable} />

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const Home = styled.div`
-  display:flex;
-  flex-direction:column !important;
+  /* display:flex;
+  flex-direction:column !important; */
 .ijHAFP {
     overflow: hidden;
     height: 100%;

@@ -34,15 +34,10 @@ function App() {
         <Route path="/passwordlogin" component={ PasswordLogin }></Route>
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
-<<<<<<< HEAD
-        <Route path="/error"  component={Error}></Route>
-        <Redirect to="/error" />
-=======
         <Route path="/detail/:subOrderId" component={FindTeacherDetail}></Route>
         <Route path="/writeComments" component={WriteComments}></Route>
-
-        <Route path="/"  component={ Index }></Route>
->>>>>>> gaoyuqing
+        <Route path="/error"  component={Error}></Route>
+        <Redirect to="/error" />
       </Switch>
     </Router>
   );
