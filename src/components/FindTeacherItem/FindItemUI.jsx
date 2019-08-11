@@ -14,7 +14,7 @@ export default (props) => {
                                 <li className="item-right"><i>￥{item.price}</i>&nbsp;&nbsp;&gt;</li>
                             </ul>
                             <ul>
-                                <li className="item-left name" > <img src="images/touxaing.png" alt=""></img>{item.studentname}</li>
+                                <li className="item-left name" > <img src="/images/touxaing.png" alt=""></img>{item.studentname}</li>
                                 <li className="item-right km"> {item.range}</li>
                             </ul>
                         </div>
