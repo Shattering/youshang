@@ -14,6 +14,9 @@ module.exports = override(
     utils: path.resolve(__dirname, './src/utils'),
     store: path.resolve(__dirname, './src/store'),
     api: path.resolve(__dirname, './src/api'),
+<<<<<<< HEAD
     images: path.resolve(__dirname, './public/images')
+=======
+>>>>>>> gaoyuqing
   })
 );

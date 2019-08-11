@@ -4,14 +4,17 @@ import {
   Ul,
   Li,
   Span,
-  I
+  I,
+  Button
 } from './styledOrder'
 import Header from '../../../components/header/Header'
 
 export default () => {
+  console.log(localStorage.type)
   return(
     <Order>
-        <Header name= '订单详情' link = '联系老师' to = '/message/chat'> 
+       
+        <Header name= '订单详情'  link ={localStorage.type>0? "联系学生" : "联系老师"} to = '/message/chat'> 
         </Header>
         <Ul>
           <Li>
@@ -47,6 +50,8 @@ export default () => {
             <I></I>
           </Li>
         </Ul>
+      
+   <Button>预约订单</Button>
       </Order>
   )
 }

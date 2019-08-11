@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
     /* background-size:100% .65rem; */
     /* height:.65rem; */
     width : 100%;
-    background : #2492EB;
+    background : #5597f7;
     height:.44rem;
     /* .fill{
         height:.24rem;

@@ -17,6 +17,8 @@ import { PasswordLogin } from '../pages/login/PasswordLogin'
 import { ForgetCode } from '../pages/forgetCode/index'
 import { SignIn } from '../pages/signin/index'
 
+import{OrderDetailContainer as FindTeacherDetail} from 'components/Subscribe/'
+import WriteComments from 'components/Comments/view/WriteComments'
 function App() {
   return (
     <Router>
@@ -34,8 +36,15 @@ function App() {
         <Route path="/passwordlogin" component={ PasswordLogin }></Route>
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
+<<<<<<< HEAD
         <Route path="/error"  component={Error}></Route>
         <Redirect to="/error" />
+=======
+        <Route path="/detail/:subOrderId" component={FindTeacherDetail}></Route>
+        <Route path="/writeComments" component={WriteComments}></Route>
+
+        <Route path="/"  component={ Index }></Route>
+>>>>>>> gaoyuqing
       </Switch>
     </Router>
   );
