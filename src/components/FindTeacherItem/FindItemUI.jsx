@@ -8,7 +8,7 @@ export default (props) => {
                 <div id="scroll-wrap-find" >
                     <div > 
                    {props.list&&props.toSubscribe ? props.list.map( item =>(                                                                                             
-                       <div key={item.oid} className="find-item-wrap"  onClick={props.toSubscribe.bind(this, item.oid)}>
+                       <div key={item.oid} className="find-item-wrap"  onClick={props.toSubscribe.bind(this, item)}>
                             <p>{item.content} </p>
                             <ul>
                                 <li className="item-left">{item.data} {item.starttime}</li>

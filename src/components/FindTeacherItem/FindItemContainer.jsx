@@ -1,4 +1,4 @@
-
+import {withRouter} from 'react-router-dom'
 import React from 'react'
 import BScroll from 'better-scroll'
 import FindItemUI from './FindItemUI'
@@ -8,7 +8,6 @@ class FindItemContainer extends React.Component {
         this.state = {
             findTeacherlist: this.props.list,   
         };
-
          this.handleToSubscribe = this.handleToSubscribe.bind(this)
       }
 
@@ -23,8 +22,13 @@ class FindItemContainer extends React.Component {
         </>
        ) 
     }
-    handleToSubscribe(orderid){
-      console.log(orderid);
+    handleToSubscribe(detailitem){
+    //  console.log(detailitem)
+      this.props.history.push(`/detail/:${detailitem.oid}`,{
+        detailitem:detailitem
+          }
+      )
+      
     }
     componentDidMount() {
          this.bScrollLeft = new BScroll('#scroll-wrap-find',{
@@ -33,4 +37,4 @@ class FindItemContainer extends React.Component {
     }
 }
 
-export default FindItemContainer
+export default withRouter(FindItemContainer)
