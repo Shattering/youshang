@@ -1,11 +1,11 @@
 import React from 'react'
+import { Button } from 'antd';
 import {
   Order,
   Ul,
   Li,
   Span,
-  I,
-  Button
+  I
 } from './styledOrder'
 import Header from '../../../components/header/Header'
 
@@ -17,7 +17,7 @@ export default (props) => {
         <Ul>
           <Li>
             <Span>距离上课时间</Span>
-            <I>09:00-11:20</I>
+            <I>{props.details.starttime}-{props.details.endtime}</I>
           </Li>
           <Li>
             <Span>上课地点</Span>
@@ -45,8 +45,9 @@ export default (props) => {
           </Li>
           <Li>
             <Span>备注订单</Span>
-            <I onClick={props.writeComments.bind(this,props.details.oid)}>&gt;&gt;&gt;</I>
+            <I onClick={props.writeComments.bind(this,props.details.id)}>&gt;&gt;&gt;</I>
           </Li>
+
           { props.buttonDisplay? 
           <Li>
             <Span>完成订单</Span>
@@ -61,13 +62,6 @@ export default (props) => {
          :
         <Button  onClick={props.conformOrder.bind(this)}>预约订单</Button>
         }
-{/*      
-   { props.buttonDisplay? 
-   <Button  onClick={props.deleteOrder.bind(this,props.details.oid)}>取消订单</Button>
-   :
- <Button  onClick={props.conformOrder.bind(this)}>预约订单</Button>
-   } */}
-    
       </Order>
   )
 }

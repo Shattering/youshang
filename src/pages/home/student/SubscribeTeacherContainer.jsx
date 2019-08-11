@@ -4,7 +4,6 @@ class SubscribeTeacherContainer extends React.Component{
     render() {
         return(
             <>
-         {/* <div>Subscribeitem</div> */}
          <HomeItem></HomeItem>
          </>
         )
