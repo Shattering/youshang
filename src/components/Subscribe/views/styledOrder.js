@@ -5,6 +5,20 @@ const Order = styled.div`
   height : 100%;
   display : flex;
   flex-direction : column;
+  .ant-btn, .ant-btn:hover, .ant-btn:focus, .ant-btn:active, .ant-btn.active{
+  height: 0.4rem;
+  width: 1.3rem;
+  font-size: .14rem;
+  line-height: .32rem;
+  background-color: #5597f7;
+  color: #fff;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  margin: .12rem auto;
+  border-radius: .05rem;
+  border: 0;
+}
 `
 
 const Header = styled.div`

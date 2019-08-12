@@ -1,23 +1,25 @@
 import React from 'react'
+import { Button } from 'antd';
+import {Link} from 'react-router-dom'
 import {
   Order,
   Ul,
   Li,
   Span,
-  I,
-  Button
+  I
 } from './styledOrder'
-import Header from '../../../components/header/Header'
+import HeaderToHome from '../../../components/header/HeaderToHome'
 
 export default (props) => {
+  console.log(props)
   return(
     <Order>
-        <Header name= '订单详情' link ={localStorage.type>0? "联系学生" : "联系老师"} to = '/message/chat'> 
-        </Header>
+        <HeaderToHome name= '订单详情' link ={localStorage.type>0? "联系学生" : "联系老师"} to = '/message/chat'> 
+        </HeaderToHome>
         <Ul>
           <Li>
             <Span>距离上课时间</Span>
-            <I>09:00-11:20</I>
+            <I>{props.details.starttime}-{props.details.endtime}</I>
           </Li>
           <Li>
             <Span>上课地点</Span>
@@ -43,10 +45,14 @@ export default (props) => {
             <Span>学生联系方式</Span>
             <I>{props.details.studentphone}</I>
           </Li>
-          <Li>
-            <Span>备注订单</Span>
-            <I onClick={props.writeComments.bind(this,props.details.oid)}>&gt;&gt;&gt;</I>
-          </Li>
+          <Link to={{
+              pathname: `/writeComments/:${props.details.id}`,
+              state:{
+                detail: props.details
+              }
+            }}><Li><Span>备注订单</Span> <I >&gt;&gt;&gt;</I></Li>
+          </Link>
+
           { props.buttonDisplay? 
           <Li>
             <Span>完成订单</Span>
@@ -59,15 +65,8 @@ export default (props) => {
         { props.buttonDisplay? 
         ''
          :
-        <Button  onClick={props.conformOrder.bind(this)}>预约订单</Button>
+        <Button  onClick={props.conformOrder.bind(this,props.details.id)}>预约订单</Button>
         }
-{/*      
-   { props.buttonDisplay? 
-   <Button  onClick={props.deleteOrder.bind(this,props.details.oid)}>取消订单</Button>
-   :
- <Button  onClick={props.conformOrder.bind(this)}>预约订单</Button>
-   } */}
-    
       </Order>
   )
 }
