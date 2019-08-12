@@ -1,7 +1,7 @@
 import  axios from 'axios';
 
 const ajax = axios.create({
-    baseURL: 'https://api.myjson.com',
+    baseURL: 'http://localhost:3004',
 })
   
 export const http = () => {

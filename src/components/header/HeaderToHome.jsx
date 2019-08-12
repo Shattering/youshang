@@ -4,7 +4,7 @@ import back from '../../assets/images/back.png'
 import {withRouter} from 'react-router-dom';
 
 
-class Header extends Component{
+class HeaderToHome extends Component{
 
     constructor(props){
         super(props);
@@ -30,9 +30,9 @@ class Header extends Component{
         )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     }
     handleBackClick(){
-        this.props.history.go(-1)
+        this.props.history.push('/index/home')
     }
 }
 
 
-export default withRouter(Header)
+export default withRouter(HeaderToHome)

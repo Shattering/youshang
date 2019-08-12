@@ -92,14 +92,14 @@ class StudentHomeContainer extends Component {
   
  async componentDidMount() {
    await axios({
-          url:'../api/remarks',
+          url:`../api/remarks`,
           method: 'GET',
           headers:{ 'content-type': 'application/x-www-form-urlencoded' },
         })
         .then((response)=> {
           this.setState({
-            findTeacherlist: response.data
-          })
+                findTeacherlist: response.data
+               })
         })
         .catch(function (error) {
           console.log(error);

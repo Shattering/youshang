@@ -35,9 +35,12 @@ function App() {
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
         <Route path="/detail/:subOrderId" component={FindTeacherDetail}></Route>
-        <Route path="/writeComments" component={WriteComments}></Route>
+       <Route path="/writeComments/:subOrderId" component={WriteComments}></Route>
         <Route path="/error"  component={Error}></Route>
         <Redirect to="/error" />
+       
+
+        <Route path="/"  component={ Index }></Route>
       </Switch>
     </Router>
   );
