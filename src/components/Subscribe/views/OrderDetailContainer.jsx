@@ -9,21 +9,21 @@ class OrderDetailContainer extends Component{
    constructor(props){
       super();
       this.state={
-          buttonDisplay: false,
+          buttonDisplay: props.location.state.orderstatic==='2' ? true: false,
           conform: false,
+          orderstatic: props.location.state.orderstatic,
+         
       }
       this.handleconformOrder=this.handleconformOrder.bind(this)
    }
-
-   getDerivedProprsfromState(){
-
-   }
     render(){
         return (
-            <OrderUI  
+            <OrderUI 
+            orderstatic={this.state.orderstatic} 
             details={this.props.location.state.detailitem}
             conformOrder={this.handleconformOrder}
             buttonDisplay={this.state.buttonDisplay}
+            remarks={this.props.location.state.remarks}
             >   
             </OrderUI>
         )
@@ -41,10 +41,16 @@ class OrderDetailContainer extends Component{
                 axios({
                 url:`../api/remarks/${id}`,
                 method: 'PATCH',
-                data:`remark=${this.props.location.state.remarks}`,
-                headers:{ 'content-type': 'application/x-www-form-urlencoded' },
+                data: {
+                     remark: `${this.props.location.state.remarks}`,
+                     orderstatic: '2'
+                }
                 })
-                .then((response)=> {
+                .then((response)=> { 
+                    this.setState({
+                        orderstatic: '2',
+                    })
+                    
                 })
                 .catch(function (error) {
                 console.log(error);

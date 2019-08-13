@@ -11,8 +11,9 @@ import {
 import HeaderToHome from '../../../components/header/HeaderToHome'
 
 export default (props) => {
-  console.log(props)
+   console.log(props.orderstatic)
   return(
+   
     <Order>
         <HeaderToHome name= '订单详情' link ={localStorage.type>0? "联系学生" : "联系老师"} to = '/message/chat'> 
         </HeaderToHome>
@@ -48,9 +49,12 @@ export default (props) => {
           <Link to={{
               pathname: `/writeComments/:${props.details.id}`,
               state:{
-                detail: props.details
+                detail: props.details,
+                orderstatic: props.orderstatic,
+                remarks: props.remarks
               }
-            }}><Li><Span>备注订单</Span> <I >&gt;&gt;&gt;</I></Li>
+            }}>
+              <Li><Span>{props.orderstatic!=='2'? '备注订单':'修改备注'}</Span> <I >&gt;&gt;&gt;</I></Li>
           </Link>
 
           { props.buttonDisplay? 
