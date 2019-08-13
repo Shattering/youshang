@@ -8,10 +8,20 @@ const StyledSignIn = styled.div`
   background:#ffffff;
   height:100%;
   main{
-  form{
+  .form{
     display:block;
     text-align:center;
     position: relative;
+    input{
+      display:block;
+      width:82%;
+      margin:0 auto;
+      height:.49rem;
+      border-top:none;
+      border-left:none;
+      border-right:none;
+      padding-left:.31rem;
+    }
     button{
       position:absolute;
       z-index:100;
