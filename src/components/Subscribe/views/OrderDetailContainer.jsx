@@ -10,11 +10,12 @@ class OrderDetailContainer extends Component{
       super();
       this.state={
           buttonDisplay: props.location.state.orderstatic==='2' ? true: false,
-          conform: false,
-          orderstatic: props.location.state.orderstatic,
+          orderstatic: props.location.state.orderstatic
          
       }
       this.handleconformOrder=this.handleconformOrder.bind(this)
+      this.handlePayOrder= this.handlePayOrder.bind(this)
+
    }
     render(){
         return (
@@ -22,6 +23,7 @@ class OrderDetailContainer extends Component{
             orderstatic={this.state.orderstatic} 
             details={this.props.location.state.detailitem}
             conformOrder={this.handleconformOrder}
+            PayOrder={this.handlePayOrder}
             buttonDisplay={this.state.buttonDisplay}
             remarks={this.props.location.state.remarks}
             >   
@@ -35,8 +37,7 @@ class OrderDetailContainer extends Component{
             content: '确定预约后你可以：联系老师或完成订单',
             onOk: ()=> {
                 this.setState({ 
-                     buttonDisplay: true,
-                     conform: true
+                     buttonDisplay: true
                      })
                 axios({
                 url:`../api/remarks/${id}`,
@@ -62,13 +63,22 @@ class OrderDetailContainer extends Component{
               }).catch((errors) => console.log(errors));
             },
 
-        onCancel: ()=> { this.setState({ 
-            buttonDisplay: false,
-            conform: false
+           onCancel: ()=> { this.setState({ 
+            buttonDisplay: false
             })},
         });
         
     }
+
+    handlePayOrder(details){
+     //  console.log(details)
+         this.props.history.push(
+             '/paycenter',{
+                details:details 
+             }
+         )
+    }
+
 }
 
 export default withRouter(OrderDetailContainer)

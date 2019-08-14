@@ -10,13 +10,8 @@ class WriteComments extends React.Component {
     super(props)
     this.state = {
       comments: props.location.state.remarks? props.location.state.remarks: ' '
-     // remcomments: ''
     }
   }
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return nextProps.location.state.detail.remark!== nextState.comments
-  // }
 
   render() {
   
@@ -41,14 +36,13 @@ class WriteComments extends React.Component {
      
       let detailitem = this.props.location.state.detail 
       let orderstatic= this.props.location.state.orderstatic
-         console.log(`/detail/:${id}`)
             if(orderstatic==='2') {
               http(
                 `../api/remarks/${id}`,
                 'PATCH',
                 `remark=${this.state.comments}`
                 ).then((response)=> {
-                      console.log(response);
+                    //  console.log(response);
                     })
             } 
   
@@ -56,7 +50,6 @@ class WriteComments extends React.Component {
           detailitem: detailitem,
           remarks: this.state.comments,
           orderstatic,
-          
              })
      
    }

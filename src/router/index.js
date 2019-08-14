@@ -4,7 +4,7 @@ import { BrowserRouter as Router , Switch, Route , Redirect } from 'react-router
 import { IndexContainer as Index } from 'pages/index/'
 import { GuidepageContainer as Guidepage } from 'pages/guidepage/'
 import { SettingContainer as Setting } from '../pages/setting/index'
-import { OrderContainer as Order } from '../pages/order/index'
+import { PayContainer as Pay } from '../pages/paycenter/index'
 import { PersonalContainer as Personal } from '../pages/personal/index'
 import { ChatContainer as Chat } from '../pages/chat/index'
 import { OrderCenterContainer as OrderCenter } from '../pages/ordercenter/index'
@@ -24,7 +24,7 @@ function App() {
       <Switch>
         <Route path='/' component={Guidepage} exact></Route>
         <Route path="/index" component={Index}></Route>
-        <Route path="/order"  component={ Order }></Route>
+        <Route path="/paycenter"  component={ Pay }></Route>
         <Route path="/ordercenter"  component={ OrderCenter }></Route>
         <Route path="/mine/personal"  component={Personal}></Route>
         <Route path="/mine/setting"  component={Setting}></Route>

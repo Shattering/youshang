@@ -11,7 +11,6 @@ import {
 import HeaderToHome from '../../../components/header/HeaderToHome'
 
 export default (props) => {
-   console.log(props.orderstatic)
   return(
    
     <Order>
@@ -67,7 +66,7 @@ export default (props) => {
           }
         </Ul>
         { props.buttonDisplay? 
-        ''
+          <Button onClick={props.PayOrder.bind(this,props.details)}>去支付</Button>
          :
         <Button  onClick={props.conformOrder.bind(this,props.details.id)}>预约订单</Button>
         }

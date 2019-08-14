@@ -23,7 +23,6 @@ class FindItemContainer extends React.Component {
        ) 
     }
     handleToSubscribe(detailitem){
-      console.log(detailitem.remark? detailitem.remark : 'hhhh')
       this.props.history.push(`/detail/:${detailitem.id}`,{
         detailitem:detailitem,
         remarks: detailitem.remark? detailitem.remark: ' ',
