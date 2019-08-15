@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import { Switch, Slider,  Row, Col } from 'antd';
 import { Online } from './StyledTeacherOnline'
 export default (props) => {
+    console.log(props)
     return(
         < Online>
                 <div className="online"><span>是否开启老师上线功能</span> <Switch size="small" defaultChecked className="switch-button" /></div>
