@@ -17,6 +17,13 @@ import { PasswordLogin } from '../pages/login/PasswordLogin'
 import { ForgetCode } from '../pages/forgetCode/index'
 import { SignIn } from '../pages/signin/index'
 
+import Name from '../pages/personal/personalList/Name'
+import Phone from '../pages/personal/personalList/Phone'
+import Education from '../pages/personal/personalList/Education'
+import Self from '../pages/personal/personalList/Self'
+import Teach from '../pages/personal/personalList/Teach'
+import Address from '../pages/personal/personalList/Address'
+
 function App() {
   return (
     <Router>
@@ -25,7 +32,13 @@ function App() {
         <Route path="/index" component={Index}></Route>
         <Route path="/order"  component={Order}></Route>
         <Route path="/ordercenter"  component={OrderCenter}></Route>
-        <Route path="/mine/personal"  component={Personal}></Route>
+        <Route path="/mine/personal"  component={Personal} exact></Route>
+        <Route path="/mine/personal/name"  component={Name}></Route>
+        <Route path="/mine/personal/add"  component={Address}></Route>
+        <Route path="/mine/personal/teach"  component={Teach}></Route>
+        <Route path="/mine/personal/edu"  component={Education}></Route>
+        <Route path="/mine/personal/phone"  component={Phone}></Route>
+        <Route path="/mine/personal/self"  component={Self}></Route>
         <Route path="/mine/setting"  component={Setting}></Route>
         <Route path="/message/chat"  component={Chat}></Route>
         <Route path="/mine/order"  component={ OrderContainer }></Route>
