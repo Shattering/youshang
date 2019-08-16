@@ -10,6 +10,7 @@ export const wxapiAsync = () => {
   return async(dispatch)=>{
     let wx = window.wx
     let url = encodeURIComponent(window.location.href.split("#")[0])
+    // let url = encodeURIComponent('http://99wind.com/')
     await fetch('http://99wind.com/weixin/jsapi',{
         method: 'POST',
         headers: {
@@ -29,7 +30,7 @@ export const wxapiAsync = () => {
           timestamp: result.timestamp, // 必填，生成签名的时间戳
           nonceStr: result.nonceStr, // 必填，生成签名的随机串
           signature: result.signature,// 必填，签名
-          jsApiList: ["scanQRCode"] // 必填，需要使用的JS接口列表
+          jsApiList: ["getLocation"] // 必填，需要使用的JS接口列表
         })
 
         wx.ready(function(){
