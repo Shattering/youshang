@@ -50,6 +50,15 @@ const CalendarUI = styled.div`
       }
     }
   }
+  .transBtn{
+    margin: 0 auto;
+    width: .1rem;
+    height: .1rem;
+    img{
+      width:100%;
+      height: 100%;
+    }
+  }
   .inner_style{
   width: 40px;
   height: 40px;

@@ -87,7 +87,7 @@ export default (props) => {
         <BorderedLI hasBorder={true}>
           <Link to="/mine/personal/add">
             <p>
-              所在地<span>{props.data.add}</span>
+              所在地<span>{props.data.address}</span>
             </p>
           </Link>
         </BorderedLI>
