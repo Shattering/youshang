@@ -28,6 +28,16 @@ const StyledPasswordLogin = styled.div`
     display:block;
     text-align:center;
     position: relative;
+    input{
+        display:block;
+        width:82%;
+        margin:0 auto;
+        height:.49rem;
+        border-top:none;
+        border-left:none;
+        border-right:none;
+        padding-left:.31rem;
+    }
     input:nth-of-type(1){
       margin-top:.40rem;
       background:url(${username}) no-repeat left center;
@@ -104,8 +114,6 @@ const StyledPasswordLogin = styled.div`
     }
   }
 `
-
-
 export {
   StyledPasswordLogin
 }

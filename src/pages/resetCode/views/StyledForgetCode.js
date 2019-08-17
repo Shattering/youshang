@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import username from '../../../assets/images/我的.png'
-import password from '../../../assets/images/密码.png'
+import code2 from '../../../assets/images/密码2.png'
+import code1 from '../../../assets/images/密码1.png'
 
-const StyledForgetCode = styled.div`
+const StyledResetCode = styled.div`
   background:#ffffff;
   height:100%;
   main{
@@ -52,11 +52,11 @@ const StyledForgetCode = styled.div`
     }
     input:nth-of-type(1){
       margin-top:.40rem;
-      background:url(${username}) no-repeat left center;
+      background:url(${code2}) no-repeat left center;
       background-size:.22rem .21rem;
     }
     input:nth-of-type(2){
-      background:url(${password}) no-repeat left center;
+      background:url(${code1}) no-repeat left center;
       background-size:.22rem .21rem;
     }
   }
@@ -82,5 +82,5 @@ const StyledForgetCode = styled.div`
 
 
 export {
-  StyledForgetCode
+  StyledResetCode
 }

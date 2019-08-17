@@ -8,6 +8,7 @@ import {
   Mine,BorderedLI
 } from './StyledMine'
 import Hello from '../../../assets/images/hello.png'
+import boy from '../../../assets/images/boy.jpeg'
 
 export default () => {
   return(
@@ -15,7 +16,7 @@ export default () => {
       <header>
           <div className="fill"></div>
           <div className="pic">
-              <Link to='/verificationcodelogin'><img src={`${Hello}`} alt="" /></Link>
+  <Link to='/verificationcodelogin'>{localStorage.success==="1"?<img src={`${boy}`} alt=""/>:<img src={`${Hello}`} alt=""/>}</Link>
           </div>
           <p className="p1">立即登录</p>
           <p className="p2">登陆/注册后使用更多功能</p>

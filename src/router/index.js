@@ -15,6 +15,7 @@ import { VerificationCodeLogin as vcl } from '../pages/login/VerificationCodeLog
 import { PasswordLogin } from '../pages/login/PasswordLogin'
 import { ForgetCode } from '../pages/forgetCode/index'
 import { SignIn } from '../pages/signin/index'
+import { ResetCode } from '../pages/resetCode/index';
 
 import{OrderDetailContainer as FindTeacherDetail} from 'components/Subscribe/'
 import WriteComments from 'components/Comments/view/WriteComments'
@@ -51,6 +52,7 @@ function App() {
         <Route path="/detail/:subOrderId" component={FindTeacherDetail}></Route>
         <Route path="/writeComments/:subOrderId" component={WriteComments}></Route>
         <Route path="/appointmentdetail/:subOrderId" component={AppointmentDetail}></Route>
+        <Route path="/resetcode" component={ResetCode}></Route>
         <Route path="/error"  component={Error}></Route>
         <Redirect to="/error" />
        
