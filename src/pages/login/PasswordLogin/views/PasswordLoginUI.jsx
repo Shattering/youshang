@@ -10,7 +10,8 @@ import eyeClosed from '../../../../assets/images/闭眼.png'
 import eye from '../../../../assets/images/睁眼.png'
 import { Link } from 'react-router-dom'
 import { Toast } from 'antd-mobile'
- 
+import { withRouter } from 'react-router-dom'
+
 class PasswordLoginUI extends Component{
   constructor(props){
     super(props)
@@ -41,7 +42,7 @@ render(){
           <input onChange={this.passwordInput} value={this.state.passwordVal} className="Password" placeholder="请输入登录密码" type={this.state.showPassword ? "password" : "text"}></input>
         </form>
         <div className="login">
-          <button>登陆</button>
+          <button onClick={this.handleLogin}>登陆</button>
           <div>
           <Link to="/signin"><p>注册账号</p></Link>
           <Link to="/forgetcode"><p className="p1">忘记密码？</p></Link>
@@ -66,7 +67,7 @@ phoneInput(e){
 }
 passwordInput(e){
   this.setState({
-    phoneVal:e.target.value
+    passwordVal:e.target.value
   })
 }
 
@@ -77,15 +78,15 @@ handleShowPassword(){
     })
 }
 
-handleLogin(){
+async handleLogin(){
   let reg = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/
   if(reg.test(this.state.phoneVal)){
-    let result = axios({
+    let result =await axios({
       url:"http://120.55.44.34/login",
       method:"post",
       data:{
-        password:`${this.state.passwordVal}`,
-        phone:`${this.state.phoneVal}`,
+        password:this.state.passwordVal,
+        phone:this.state.phoneVal,
         type:localStorage.type==="1"?1:2
       },
       transformRequest: [function (data) {
@@ -103,17 +104,20 @@ handleLogin(){
         .catch(function (error) {
           console.log(error);
       });
+      console.log(result)
       if(result.data.code===0){
-        Toast.loading('Loading...',1,()=>{
+        localStorage.setItem("success","1")
+        Toast.loading('登陆成功',1,()=>{
           this.props.history.push(`/index/home`)
         })
       }
+      else{
+        Toast.fail("手机号或密码错误",1)
+      }
   }
-  else{
-    Toast.fail("手机号或密码错误",1)
-  }
+ 
 }
 }
 
 
-export default PasswordLoginUI
+export default withRouter(PasswordLoginUI) 

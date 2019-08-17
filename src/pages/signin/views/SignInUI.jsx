@@ -5,8 +5,9 @@ import {
   StyledSignIn
 } from './StyledSignIn'
 import { Toast } from 'antd-mobile';
+import { withRouter } from 'react-router-dom'
 
-export default class SignInUI extends React.Component{
+class SignInUI extends React.Component{
 constructor(props){
   super(props)
   this.state = ({
@@ -26,6 +27,7 @@ constructor(props){
 }
 
 render(){
+  // console.log(this.props)
     return(
       <StyledSignIn>
         <LoginHeader name1="注册"></LoginHeader>
@@ -76,7 +78,7 @@ render(){
       url: 'http://120.55.44.34/yanzhengma',
       method: 'post',
       data: {
-      phone: `${this.state.phoneVal}`
+      phone: this.state.phoneVal
       },
       transformRequest: [function (data) {
       // Do whatever you want to transform the data
@@ -123,63 +125,37 @@ render(){
   }
 
   async handleConfirm(){
+    // console.log(typeof this.state.phoneVal)
+    // console.log(typeof this.state.codeVal)
+    // console.log(typeof this.state.passwordVal)
+    // console.log(typeof this.state.tpasswordVal)
     let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/
     if(reg.test(this.state.passwordVal) && this.state.passwordVal===this.state.tpasswordVal){
       if(localStorage.type==="1"){
+        // console.log(this.state.phoneVal)
         let result = await axios({
-        url:'http://120.55.44.34/teacher/register',
-        method: 'post',
-        data: {
-        phone: `${this.state.phoneVal}`,
-        num:`${this.state.codeVal}`,  //验证码
-        password:`${this.state.passwordVal}`,
-        tpassword:`${this.state.tpasswordVal}`
-        },
-        transformRequest: [function (data) {
-        // Do whatever you want to transform the data
-        let ret = ''
-        for (let it in data) {
-        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+        url:`http://120.55.44.34/teacher/register?phone=${this.state.phoneVal}&num=${Number(this.state.codeVal)}&password=${this.state.passwordVal}&tpassword=${this.state.tpasswordVal}`,
+        method: 'get',
+        // data: {
+        // phone:this.state.phoneVal,
+        // num:Number(this.state.codeVal),  //验证码
+        // password:this.state.passwordVal,
+        // tpassword:this.state.tpasswordVal
+        // },
+
+        // transformRequest: [function (data) {
+        // // Do whatever you want to transform the data
+        // let ret = ''
+        // for (let it in data) {
+        // ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+        // }
+        // // ret=ret.RTrim('&')
+        // // setTimeout(()=>{
+        // //   console.log(ret)
+        // // },1000)
         
-        }
-        // ret=ret.RTrim('&')
-        // setTimeout(()=>{
-        //   console.log(ret)
-        // },1000)
-        
-        return ret
-        }],
-        })
-        .then(function (response) {
-          return response;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-        if(result.data.code===0){
-          Toast.info("恭喜注册老师账号成功")
-        }
-      }  
-      else{
-        let result = await axios({
-          url:'http://120.55.44.34/student/register',
-          method: 'post',
-          data: {
-          phone: `${this.state.phoneVal}`,
-          num:`${this.state.codeVal}`,  //验证码
-          password:`${this.state.passwordVal}`,
-          tpassword:`${this.state.tpasswordVal}`
-        },
-        transformRequest: [function (data) {
-        // Do whatever you want to transform the data
-        let ret = ''
-        for (let it in data) {
-        ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-        }
-        ret=ret.slice(0,ret.Length-1)
-        console.log(ret)
-        return ret
-        }],
+        // return ret
+        // }],
         })
         .then(function (response) {
           return response;
@@ -189,10 +165,46 @@ render(){
         });
         console.log(result)
         if(result.data.code===0){
-          Toast.info("恭喜注册学生账号成功")
+          Toast.info("恭喜注册老师账号成功",1,()=>{
+            this.props.history.push(`/index/home`)
+        })
+      }  
+    }
+      else{
+        let result = await axios({
+          url:`http://120.55.44.34/student/register?phone=${this.state.phoneVal}&num=${Number(this.state.codeVal)}&password=${this.state.passwordVal}&tpassword=${this.state.tpasswordVal}`,
+          method: 'get',
+          // data: {
+          // phone:this.state.phoneVal,
+          // num:Number(this.state.codeVal), //验证码
+          // password:this.state.passwordVal,
+          // tpassword:this.state.tpasswordVal
+          // },
+          // headers:{'Content-Type': 'multipart/form-data'},
+          // transformRequest: [function (data) {
+          // // Do whatever you want to transform the data
+          // let ret = ''
+          // for (let it in data) {
+          // ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+          // }
+          // return ret
+          // }],
+          })
+        .then(function (response) {
+          return response;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+        console.log(result)
+        if(result.data.code===0){
+          Toast.info("恭喜注册学生账号成功",1,()=>{
+            this.props.history.push(`/index/home`)
+          })
         }
       }
     }
+  
     else if(reg.test(this.state.passwordVal)===false)
     {
       Toast.fail("密码格式错误",1)
@@ -205,3 +217,5 @@ render(){
   }
 
 }
+
+export default withRouter(SignInUI) 

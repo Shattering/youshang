@@ -16,6 +16,7 @@ import { VerificationCodeLogin as vcl } from '../pages/login/VerificationCodeLog
 import { PasswordLogin } from '../pages/login/PasswordLogin'
 import { ForgetCode } from '../pages/forgetCode/index'
 import { SignIn } from '../pages/signin/index'
+import { ResetCode } from '../pages/resetCode/index';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/passwordlogin" component={ PasswordLogin }></Route>
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
+        <Route path="/resetcode" component={ResetCode}></Route>
         <Route path="/error"  component={Error}></Route>
         <Redirect to="/error" />
       </Switch>
