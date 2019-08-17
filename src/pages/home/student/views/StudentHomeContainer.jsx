@@ -5,8 +5,8 @@ import {
 import { TabBar } from 'antd-mobile';
 import MySwiper from 'components/swiper/views/Swiper'
 import FindItemContainer from 'components/FindTeacherItem/FindItemContainer'
-import SubscribeTeacherUI from './SubscribeTeacherUI'
-import{ http} from 'utils/http.js'
+import SubscribeTeacherUI from '../subscribe/SubscribeTeacherUI'
+import  axios from 'axios';
 class StudentHomeContainer extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +22,7 @@ class StudentHomeContainer extends Component {
     return (
       <Home>    
         <MySwiper></MySwiper>
+         <div style={ { height: '100%', width: '100%' ,marginTop: '-.05rem'} }>
         <TabBar
           unselectedTintColor="#5e5e5e"
           tintColor="#5d83fe"
@@ -84,17 +85,24 @@ class StudentHomeContainer extends Component {
             <SubscribeTeacherUI></SubscribeTeacherUI>
           </TabBar.Item>
           </TabBar>
+          </div>
      </Home>
     )
   }
   
  async componentDidMount() {
-      await http().then( response => {
-         this.setState({
-          findTeacherlist: response.data.data.subscribelist 
-         })
-        
-      })
+   await axios({
+          url:`../api/remarks`,
+          method: 'GET',
+        })
+        .then((response)=> {
+          this.setState({
+                findTeacherlist: response.data
+               })
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
      
   }
 }

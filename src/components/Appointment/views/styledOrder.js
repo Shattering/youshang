@@ -5,12 +5,26 @@ const Order = styled.div`
   height : 100%;
   display : flex;
   flex-direction : column;
+  .ant-btn, .ant-btn:hover, .ant-btn:focus, .ant-btn:active, .ant-btn.active{
+  height: 0.4rem;
+  width: 1.3rem;
+  font-size: .14rem;
+  line-height: .32rem;
+  background-color: #5597f7;
+  color: #fff;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  margin: .12rem auto;
+  border-radius: .05rem;
+  border: 0;
+}
 `
 
 const Header = styled.div`
   width : 100%;
   height : .44rem;
-  background : #2492EB;
+  background-color : #5597f7 !important;
   text-align : center;
   line-height : .44rem;
   color : #fff;
@@ -53,9 +67,10 @@ const Ul = styled.ul`
 const Li = styled.li`
   width : 100%;
   display : flex;
-  height : .405rem;
+  height : .48rem;
+  align-items: center;
   border-bottom : 1px solid #EBEBEB;
-  padding-top : .12rem;
+  /* padding-top : .12rem; */
 `
 
 
@@ -82,12 +97,26 @@ const I = styled.i`
   text-align : right;
   padding-right : .175rem;
 `
-
+const Button = styled.button`
+   height: 0.4rem;
+  width: 1.3rem;
+  font-size: .14rem;
+  line-height: .32rem;
+  background-color: #5597f7;
+  color: #fff;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  margin: .12rem auto;
+  border-radius: .05rem;
+  border: 0;
+`
 export {
   Order,
   Header,
   Ul,
   Li,
   Span,
-  I
+  I,
+  Button
 }

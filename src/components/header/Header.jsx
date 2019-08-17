@@ -27,7 +27,7 @@ class Header extends Component{
                     </p>
                 </div>
             </StyledHeader>
-        )
+        )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     }
     handleBackClick(){
         this.props.history.go(-1)

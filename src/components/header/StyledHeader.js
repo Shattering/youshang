@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
     /* background-size:100% .65rem; */
     /* height:.65rem; */
     width : 100%;
-    background : #2492EB;
+    background : #5597f7;
     height:.44rem;
     /* .fill{
         height:.24rem;
@@ -25,20 +25,15 @@ const StyledHeader = styled.header`
             font-weight:500;
             color:rgba(255,255,255,1);
             span{
-                position: absolute;
-                left : 2.47rem;
+                position: fixed;
+                right : .19rem;
                 top : .14rem;
                 z-index : 1;
-                display : block;
-                width : 1.28rem;
                 font-size : .16rem;
                 font-family : PingFangSC-Heavy;
                 font-weight : 400;
                 color : #fff;
-                text-align : right;
-                height : .16rem;
                 line-height : .16rem;
-                padding-right : .175rem;
             }
         }
         img{

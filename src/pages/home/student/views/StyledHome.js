@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 const Home = styled.div`
-  display:flex;
-  flex-direction:column !important;
 .ijHAFP {
     overflow: hidden;
     height: 100%;
@@ -11,15 +9,6 @@ const Home = styled.div`
   height: 100%!important;
 }
 .sc-gzVnrw{
-  height: 100% !important;
-}
-.am-tabs{
-  height: 100% !important;
-}
-.am-tabs-item{
-  height: 100% !important;
-}
-.am-tabs-pane-wrap{
   height: 100% !important;
 }
 .am-tabs-horizontal .am-tabs-pane-wrap-inactive {
@@ -50,7 +39,6 @@ const Home = styled.div`
 }
 
 `
-
 export {
   Home,
 }
