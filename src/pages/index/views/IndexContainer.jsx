@@ -67,6 +67,24 @@ class IndexContainer extends Component {
     })
   }
 
+  getLocation() {
+    if(this.props.wxReady === 'false'){
+      Toast.fail('wx is not ready', 1);
+      return ;
+    }
+    window.wx.getLocation({
+      type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+      success: (res)=>{
+        const BMap = window.BMap
+        var point = new BMap.Point(res.longitude,res.latitude);
+        var gc = new BMap.Geocoder();
+        gc.getLocation(point, function (res) {
+          alert(JSON.stringify(res))
+        })
+      }
+    });
+  }
+
   render() {
     return (
       <IndexUI 
@@ -78,29 +96,12 @@ class IndexContainer extends Component {
     )
   }
 
-  getLocation() {
-    console.log(this.props.wxReady)
-    if(this.props.wxReady == 'false'){
-      Toast.fail('wx is not ready', 1);
-      return ;
-    }
-    window.wx.getLocation({
-      type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
-      success: function (res) {
-        var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
-        var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
-        var speed = res.speed; // 速度，以米/每秒计
-        var accuracy = res.accuracy; // 位置精度
-        console.log(res)
-        return res
-      }
-    });
+  componentDidUpdate() {
+    console.log("update了哦" + this.props.wxReady)
+    this.getLocation()
   }
-
-  async componentDidMount() {
+  componentDidMount() {
     this.props.isWxReady()
-    // let res = await this.getLocation()
-    // console.log(res)
   }
 }
 

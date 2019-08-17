@@ -28,9 +28,9 @@ export default (props) => {
                     <p>
                       <button onClick={()=>{
                         props.history.push('/index/home',{
-                          type:0
+                          type:2
                         })
-                        localStorage.setItem('type','0')
+                        localStorage.setItem('type','2')
                       }}>学生</button>
                       <button onClick={()=>{
                         props.history.push('/index/home',{

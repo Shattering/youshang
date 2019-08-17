@@ -3,10 +3,17 @@ import ErrorUI from './ErrorUI'
 
 
 class ErrorContainer extends Component {
+  constructor(){
+    super()
+    this.handlegohome = this.handlegohome.bind(this)
+  }
   render() {
     return (
-      <ErrorUI></ErrorUI>
+      <ErrorUI gohome={this.handlegohome}></ErrorUI>
     )
+  }
+  handlegohome(){
+    this.props.history.push('/index/home')
   }
 }
 

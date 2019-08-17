@@ -6,8 +6,9 @@ import ajax from '../../utils/ajax'
 
 // import style from './style.use.less';
 import CalendarUI from './CalendarUI.js';
-import left from './img/left.png';
-import right from './img/right.png';
+import left from 'assets/images/left.png';
+import right from 'assets/images/right.png';
+import down from 'assets/images/down.png';
 import TimetipsUI from './TimetipsUI'
 
 
@@ -61,7 +62,7 @@ export default class WebCalendar extends Component {
 
     async componentDidMount() {
         this.result = await ajax('http://10.9.65.236:5500/CoursePlan')
-        if(localStorage.type === '0' ) {
+        if(localStorage.type === '2' ) {
             this.result = this.result[0].plan
         }
         if(localStorage.type === '1' ) {
@@ -184,6 +185,13 @@ export default class WebCalendar extends Component {
             this.initCalendar(date)
             console.log(date)
         }
+        const Img = document.querySelector('.transImg')
+        if(this.isopen){
+            Img.style.transform = 'rotate(0)';
+        }
+        else{
+            Img.style.transform = 'rotate(180deg)';
+        }
     }
 
     onClickThings(item, index) {
@@ -283,7 +291,7 @@ export default class WebCalendar extends Component {
                         </div>
                     </div>)}
                 </div>
-                <button onClick={this.sizeChange.bind(this)}>缩放</button>
+                <div onClick={this.sizeChange.bind(this)} className="transBtn"><img src={down} alt="" className="transImg"/></div>
             </div>
         );
     }

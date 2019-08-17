@@ -51,7 +51,7 @@ export default ({
           ref={ctx}
           style={{width: '200px'}} 
         />
-        <button className="sendMsg" onClick={submit}>
+        <button className="sendMsg" onTouchStart={submit}>
           <span>发送</span>
         </button>
       </div>

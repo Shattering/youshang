@@ -30,6 +30,7 @@ class ChatContainer extends Component {
       type,
       msg
     }
+    console.log(data)
     this.ws.send(JSON.stringify(data))
     this.setState({inputVal:''})
     this.ctx.current.value=""

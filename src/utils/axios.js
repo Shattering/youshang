@@ -1,9 +1,10 @@
 import  axios from 'axios';
 
-export const http = (arguments) => {
-    return axios.create({
-        baseURL: 'http://localhost:3004',
-    }).request({
-        url:arguments.url,
-    })
+export const http = (url, method, data ) => {
+    return  axios({
+        url,
+        method: method||'GET',
+        data: data||{},
+        headers:{ 'content-type': 'application/x-www-form-urlencoded' }
+        })
 }
