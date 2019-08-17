@@ -14,7 +14,7 @@ export default (props) => {
   return(
    
     <Order>
-        <HeaderToHome name= '订单详情' link ={localStorage.type>0? "联系学生" : "联系老师"} to = '/message/chat'> 
+        <HeaderToHome name= '订单详情' link ={parseInt(localStorage.type)=== 1? "联系学生" : "联系老师"} to = '/message/chat'> 
         </HeaderToHome>
         <Ul>
           <Li>
