@@ -5,7 +5,7 @@ import {
 import { TabBar } from 'antd-mobile';
 import MySwiper from 'components/swiper/views/Swiper'
 import FindItemContainer from 'components/FindTeacherItem/FindItemContainer'
-import SubscribeTeacherUI from './SubscribeTeacherUI'
+import SubscribeTeacherUI from '../subscribe/SubscribeTeacherUI'
 import  axios from 'axios';
 class StudentHomeContainer extends Component {
   constructor(props) {
