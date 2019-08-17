@@ -30,7 +30,6 @@ class ChatContainer extends Component {
       type,
       msg
     }
-    console.log(data)
     this.ws.send(JSON.stringify(data))
     this.setState({inputVal:''})
     this.ctx.current.value=""
@@ -44,7 +43,7 @@ class ChatContainer extends Component {
 
   //实现websocket
   Websocket() {
-    this.ws = new WebSocket('ws://10.9.65.209:3333/chat')
+    this.ws = new WebSocket('ws://106.12.133.18:3333/chat')
   
     this.ws.onmessage = (msg) => {
       let data = JSON.parse(msg.data)
