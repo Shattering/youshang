@@ -25,6 +25,7 @@ import Self from '../pages/personal/personalList/Self'
 import Teach from '../pages/personal/personalList/Teach'
 import Address from '../pages/personal/personalList/Address'
 
+import{AppointmentContainer as AppointmentDetail} from 'components/Appointment'
 function App() {
   return (
     <Router>
@@ -48,7 +49,8 @@ function App() {
         <Route path="/forgetcode" component={ ForgetCode }></Route>
         <Route path="/signin" component={SignIn}></Route>
         <Route path="/detail/:subOrderId" component={FindTeacherDetail}></Route>
-       <Route path="/writeComments/:subOrderId" component={WriteComments}></Route>
+        <Route path="/writeComments/:subOrderId" component={WriteComments}></Route>
+        <Route path="/appointmentdetail/:subOrderId" component={AppointmentDetail}></Route>
         <Route path="/error"  component={Error}></Route>
         <Redirect to="/error" />
        
