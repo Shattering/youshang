@@ -66,8 +66,25 @@ class IndexContainer extends Component {
       return 0;
     })
   }
-
   getLocation() {
+    if(this.props.wxReady === 'false'){
+      Toast.fail('wx is not ready', 1);
+      return ;
+    }
+    window.wx.getLocation({
+      type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+      success: (res)=>{
+        const BMap = window.BMap
+        var point = new BMap.Point(res.longitude,res.latitude);
+        var gc = new BMap.Geocoder();
+        gc.getLocation(point, function (res) {
+          alert(JSON.stringify(res))
+        })
+      }
+    });
+  }
+
+  Location() {
     if(this.props.wxReady === 'false'){
       Toast.fail('wx is not ready', 1);
       return ;
@@ -98,7 +115,7 @@ class IndexContainer extends Component {
 
   componentDidUpdate() {
     console.log("update了哦" + this.props.wxReady)
-    this.getLocation()
+    this.Location()
   }
   componentDidMount() {
     this.props.isWxReady()
