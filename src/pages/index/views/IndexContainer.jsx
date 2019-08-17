@@ -3,7 +3,11 @@ import IndexUI from './IndexUI'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { wxapiAsync } from 'api/wx-api/actionCreator'
+import { Toast } from 'antd-mobile'
 
+const mapState = (state) => ({
+  wxReady: state.wxReady
+})
 const mapDispatch = (dispatch) => ({
   isWxReady() {
     dispatch(wxapiAsync())
@@ -100,4 +104,4 @@ class IndexContainer extends Component {
   }
 }
 
-export default connect(null,mapDispatch)(withRouter(IndexContainer))
+export default connect(mapState,mapDispatch)(withRouter(IndexContainer))
