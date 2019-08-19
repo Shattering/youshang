@@ -25,8 +25,8 @@ const StyledHeader = styled.header`
             font-weight:500;
             color:rgba(255,255,255,1);
             span{
-                position: absolute;
-                left : 2.47rem;
+                position: fixed;
+                right:.19rem;
                 top : .14rem;
                 z-index : 1;
                 display : block;
@@ -38,7 +38,6 @@ const StyledHeader = styled.header`
                 text-align : right;
                 height : .16rem;
                 line-height : .16rem;
-                padding-right : .175rem;
             }
         }
         img{

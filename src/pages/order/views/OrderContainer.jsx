@@ -3,10 +3,11 @@ import OrderUI from './OrderUI'
 
 class OrderContainer extends Component{
     render(){
+        // console.log(this.props.history.location.state.item);
         return (
-            <OrderUI></OrderUI>
+            <OrderUI list={this.props.history.location.state.item}></OrderUI>
         )
-    }
+    } 
 }
-
+ 
 export default OrderContainer

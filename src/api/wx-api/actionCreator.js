@@ -33,7 +33,7 @@ export const wxapiAsync = () => {
         })
 
         wx.ready(function(){
-          console.log('wx is ready !')
+          // console.log('wx is ready !')
           dispatch(wxapiSync({
             wxReady:true
           }))
