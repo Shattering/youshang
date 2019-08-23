@@ -2,18 +2,6 @@ import React from 'react'
 import BScroll from 'better-scroll'
 import {withRouter} from 'react-router-dom'
 import HomeItemUI from './HomeItemUI'
-import {connect} from 'react-redux'
-import {getLocationAsync} from './actionCreator'
-const mapState= state => ({  
-  //把store中subscribelist.list数据放在了 props.list上
-  locationlist: state.appointmentlist.locationlist
-  })
-  
-  const mapDispatch = (dispatch) => ({
-    showMap() {
-          dispatch(getLocationAsync())
-      }
-  })
 
   
 class HomeItem extends React.Component{
@@ -53,4 +41,4 @@ class HomeItem extends React.Component{
   }
 }
 
-export default connect(mapState, mapDispatch)(withRouter(HomeItem))
+export default withRouter(HomeItem)

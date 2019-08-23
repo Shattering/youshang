@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const CalendarUI = styled.div`
+background:#dbeeff!important;
   .calendar-header{
     background:#5598F7;
     display: flex;
@@ -15,7 +16,7 @@ const CalendarUI = styled.div`
     }
   }
   .calendar-body{
-    background: #fff;
+    /* background: #fff; */
     padding-top: .3rem;
     padding-left: 14px;
     padding-bottom: 20px;
@@ -41,7 +42,7 @@ const CalendarUI = styled.div`
       flex-wrap: wrap;
       justify-content: space-around;
       .day {
-      width: 14.2%;
+        width: 14.2%;
         height: 40px;
         display: flex;
         align-items: center;

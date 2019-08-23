@@ -9,7 +9,11 @@
       "classaddress": "北京市昌平区沙河路18号北科",
       "content": "小学语文",
       "price": "120",
+<<<<<<< HEAD
       "remark": "",
+=======
+      "remark": " gerg",
+>>>>>>> gaoyuqing
       "teacherid": "01",
       "studentid": "01",
       "studentname": "徐老师",

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const TimetipsUI = styled.div`
   margin: 0.1rem .25rem;
+  
   .timeitem{
     margin-bottom: .05rem;
     background:#fff;
