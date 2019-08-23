@@ -5,7 +5,7 @@ const defaultState = {
 }
 
 const appointmentReducer = (state = defaultState, action )=> {
-     switch(action.type) {
+     switch(action.type) {                       
          case GETLOCATION: 
            return {
             locationlist: action.res

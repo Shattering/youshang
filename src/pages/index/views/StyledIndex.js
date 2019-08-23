@@ -5,10 +5,12 @@ const Index = styled.div`
   flex-direction:column;
   height:100%;
   width:100%;
+  
 `
 const Main = styled.div`
   height: calc(100% - .49rem)!important;
   overflow:scroll;
+  /* background: #dbeeff!important; */
 `
 const Nav = styled.div`
   height:.49rem;
