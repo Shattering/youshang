@@ -9,15 +9,15 @@
       "classaddress": "北京市昌平区沙河路18号北科",
       "content": "小学语文",
       "price": "120",
-      "remark": "此安慰色FDC",
+      "remark": " 么么哦哦哦",
       "teacherid": "01",
       "studentid": "01",
-      "studentname": "徐小明",
+      "studentname": "徐老师",
       "teacherphone": "13946201440",
       "studentphone": "18745236672",
       "studentevaluate": "很棒的老师",
       "teacherevaluate": "很棒的学生",
-      "orderstatic": "1"
+      "orderstatic": "2"
     },
     {
       "id": "0002",
@@ -28,15 +28,15 @@
       "classaddress": "北京市昌平区沙河路18号南科",
       "content": "高中数学",
       "price": "1120",
-      "remark": "nxdgcv n ",
+      "remark": " 帮你代付吧",
       "teacherid": "02",
       "studentid": "02",
-      "studentname": "高雨晴",
+      "studentname": "高老师",
       "teacherphone": "13946201440",
       "studentphone": "18745236672",
       "studentevaluate": "很棒的老师",
       "teacherevaluate": "很棒的学生",
-      "orderstatic": "1"
+      "orderstatic": "2"
     },
     {
       "id": "0003",
@@ -47,10 +47,10 @@
       "classaddress": "北京市昌平区沙河路18号西科",
       "content": "Html5",
       "price": "2000",
-      "remark": "好好学习,天天向上",
+      "remark": "",
       "teacherid": "03",
       "studentid": "03",
-      "studentname": "菜花",
+      "studentname": "菜老师",
       "teacherphone": "13946201440",
       "studentphone": "18745236672",
       "studentevaluate": "很棒的老师",
@@ -66,15 +66,53 @@
       "classaddress": "北京市昌平区沙河路18号东科",
       "content": "高中生物",
       "price": "220",
-      "remark": "好好学习,天天向上",
+      "remark": "",
       "teacherid": "04",
       "studentid": "04",
-      "studentname": "乔碧萝",
+      "studentname": "乔老师",
       "teacherphone": "13946201440",
       "studentphone": "18745236672",
       "studentevaluate": "很棒的老师",
       "teacherevaluate": "很棒的学生",
       "orderstatic": "1"
+    },
+    {
+      "id": "0005",
+      "data": "2019-8月7-8月11日",
+      "starttime": "16:00",
+      "endtime": "20:00",
+      "range": "1.5km",
+      "classaddress": "北京市昌平区沙河路18号东科",
+      "content": "高中生物",
+      "price": "220",
+      "remark": " 强哥牛逼\n\n",
+      "teacherid": "05",
+      "studentid": "05",
+      "studentname": "萝老师",
+      "teacherphone": "13946201440",
+      "studentphone": "18745236672",
+      "studentevaluate": "很棒的老师",
+      "teacherevaluate": "很棒的学生",
+      "orderstatic": "2"
+    },
+    {
+      "id": "0006",
+      "data": "2019-8月7-8月11日",
+      "starttime": "16:00",
+      "endtime": "20:00",
+      "range": "1.5km",
+      "classaddress": "北京市昌平区沙河路18号东科",
+      "content": "高中生物",
+      "price": "220",
+      "remark": " ",
+      "teacherid": "06",
+      "studentid": "06",
+      "studentname": "厘老师",
+      "teacherphone": "13946201440",
+      "studentphone": "18745236672",
+      "studentevaluate": "很棒的老师",
+      "teacherevaluate": "很棒的学生",
+      "orderstatic": "2"
     }
   ],
   "comments": [
@@ -86,5 +124,111 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "CoursePlan": [
+    {
+      "type": 0,
+      "plan": {
+        "2019/8/03": [
+          {
+            "time": "14:05",
+            "content": "与路老大有一节Vue课程"
+          },
+          {
+            "time": "16:05",
+            "content": "与杨彦祖有一节node课程"
+          }
+        ],
+        "2019/8/04": [
+          {
+            "time": "9:00",
+            "content": "与大鑫姐有一节CSS3课程"
+          }
+        ],
+        "2019/8/06": [
+          {
+            "time": "9:05",
+            "content": "与大鑫姐有一节CSS3课程"
+          },
+          {
+            "time": "14:05",
+            "content": "与杨彦祖有一节node课程"
+          },
+          {
+            "time": "20:00",
+            "content": "与陆老大有一节ReactJS课程"
+          }
+        ],
+        "2019/8/07": [
+          {
+            "time": "9:00",
+            "content": "与大鑫姐有一节CSS课程"
+          },
+          {
+            "time": "14:05",
+            "content": "与杨彦祖有一节Vue课程"
+          },
+          {
+            "time": "16:05",
+            "content": "与陆老大有一节ReactJS课程"
+          }
+        ],
+        "2019/8/08": [
+          {
+            "time": "9:05",
+            "content": "与路老大有一节Vue课程"
+          },
+          {
+            "time": "16:05",
+            "content": "与杨彦祖有一节node课程"
+          }
+        ]
+      }
+    },
+    {
+      "type": 1,
+      "plan": {
+        "2019/8/03": [
+          {
+            "time": "14:05",
+            "content": "与马小虎有一节Vue课程"
+          },
+          {
+            "time": "16:05",
+            "content": "与丁小浩有一节Vue课程"
+          }
+        ],
+        "2019/8/04": [
+          {
+            "time": "9:00",
+            "content": "与李小懵有一节ReactJS课程"
+          }
+        ],
+        "2019/8/06": [
+          {
+            "time": "9:05",
+            "content": "与马小虎有一节Vue课程"
+          },
+          {
+            "time": "14:05",
+            "content": "与丁小浩有一节Vue课程"
+          },
+          {
+            "time": "20:00",
+            "content": "与金小天有一节ReactJS课程"
+          }
+        ],
+        "2019/8/08": [
+          {
+            "time": "9:05",
+            "content": "与丁小浩有一节Vue课程"
+          },
+          {
+            "time": "16:05",
+            "content": "与金小天有一节ReactJS课程"
+          }
+        ]
+      }
+    }
+  ]
 }

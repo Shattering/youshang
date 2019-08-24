@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react';
 
-import ajax from '../../utils/ajax'
+import axios from 'axios'
 
 // import style from './style.use.less';
 import CalendarUI from './CalendarUI.js';
-import left from './img/left.png';
-import right from './img/right.png';
+import left from 'assets/images/left.png';
+import right from 'assets/images/right.png';
+import down from 'assets/images/down.png';
 import TimetipsUI from './TimetipsUI'
 
 
@@ -59,16 +60,18 @@ export default class WebCalendar extends Component {
         this.clickIndex = -1;
     }
 
-    async componentDidMount() {
-        this.result = await ajax('http://10.9.65.236:5500/CoursePlan')
-        if(localStorage.type === '0' ) {
-            this.result = this.result[0].plan
-        }
-        if(localStorage.type === '1' ) {
-            this.result = this.result[1].plan
-        }
-        this.initCalendar(new Date(this.today))
-        this.initItemList(this.today)
+    componentDidMount() {
+        axios('../api/CoursePlan')
+        .then((response)=>{
+            if(localStorage.type === '2' ) {
+                this.result = response.data[1].plan
+            }
+            if(localStorage.type === '1' ) {
+                this.result = response.data[0].plan
+            }
+            this.initCalendar(new Date(this.today))
+            this.initItemList(this.today)
+        })
     }
 
 
@@ -182,7 +185,13 @@ export default class WebCalendar extends Component {
             const date = new Date(`${this.state.currentYear}/${this.state.currentMonth}/${this.state.currentDay}`);
             this.hidd = !this.hidd
             this.initCalendar(date)
-            console.log(date)
+        }
+        const Img = document.querySelector('.transImg')
+        if(this.isopen){
+            Img.style.transform = 'rotate(0)';
+        }
+        else{
+            Img.style.transform = 'rotate(180deg)';
         }
     }
 
@@ -283,7 +292,7 @@ export default class WebCalendar extends Component {
                         </div>
                     </div>)}
                 </div>
-                <button onClick={this.sizeChange.bind(this)}>缩放</button>
+                <div onClick={this.sizeChange.bind(this)} className="transBtn"><img src={down} alt="" className="transImg"/></div>
             </div>
         );
     }

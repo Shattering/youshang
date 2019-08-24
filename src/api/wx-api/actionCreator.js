@@ -10,6 +10,7 @@ export const wxapiAsync = () => {
   return async(dispatch)=>{
     let wx = window.wx
     let url = encodeURIComponent(window.location.href.split("#")[0])
+    // let url = encodeURIComponent('http://99wind.com/')
     await fetch('http://99wind.com/weixin/jsapi',{
         method: 'POST',
         headers: {
@@ -24,12 +25,12 @@ export const wxapiAsync = () => {
       })
       .then((result) => {
         wx.config({
-          debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
           appId: result.appId, // 必填，公众号的唯一标识
           timestamp: result.timestamp, // 必填，生成签名的时间戳
           nonceStr: result.nonceStr, // 必填，生成签名的随机串
           signature: result.signature,// 必填，签名
-          jsApiList: ["scanQRCode"] // 必填，需要使用的JS接口列表
+          jsApiList: ["getLocation"] // 必填，需要使用的JS接口列表
         })
 
         wx.ready(function(){

@@ -24,9 +24,20 @@ const StyledPasswordLogin = styled.div`
     }
   }
   form{
+    position:relative;
     display:block;
     text-align:center;
     position: relative;
+    input{
+        display:block;
+        width:82%;
+        margin:0 auto;
+        height:.49rem;
+        border-top:none;
+        border-left:none;
+        border-right:none;
+        padding-left:.31rem;
+    }
     input:nth-of-type(1){
       margin-top:.40rem;
       background:url(${username}) no-repeat left center;
@@ -35,6 +46,13 @@ const StyledPasswordLogin = styled.div`
     input:nth-of-type(2){
       background:url(${password}) no-repeat left center;
       background-size:.22rem .21rem;
+    }
+    img{
+      position:absolute;
+      right:.4rem;
+      top:.65rem;
+      width:.21rem;
+      height:.15rem;
     }
   }
   .login{
@@ -96,8 +114,6 @@ const StyledPasswordLogin = styled.div`
     }
   }
 `
-
-
 export {
   StyledPasswordLogin
 }

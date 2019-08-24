@@ -211,3 +211,44 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
+
+.am-picker-popup{
+  position: absolute;
+  top:0 ;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 3rem;
+}
+.am-picker-popup-header div{
+  font-size: .14rem;
+}
+.am-picker-col-item{
+  font-size: .14rem;
+}
+.am-picker-popup-item{
+  padding: 9px 24px;
+}
+.am-modal-transparent .am-modal-content{
+  display: flex;
+  flex-direction: column;
+}
+.am-modal-transparent .am-modal-content .am-modal-body{
+  padding: 0 .15rem;
+  flex:1;
+}
+.am-list-item .am-list-line .am-list-content{
+  font-size: .14rem;
+}
+.am-modal-content .am-modal-button{
+  height: .4rem;
+  font-size: .16rem;
+  line-height: .4rem;
+}
+.am-modal-transparent{
+  height: 3rem;
+}
+.am-list-item .am-list-thumb:first-child{
+  position: absolute;
+  right:0;
+}

@@ -3,7 +3,8 @@ import IndexUI from './IndexUI'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { wxapiAsync } from 'api/wx-api/actionCreator'
-import { Toast } from 'antd-mobile'
+import { Toast } from 'antd-mobile';  
+
 
 const mapState = (state) => ({
   wxReady: state.wxReady
@@ -65,7 +66,8 @@ class IndexContainer extends Component {
       return 0;
     })
   }
-  getLocation() {
+
+  Location() {
     if(this.props.wxReady === 'false'){
       Toast.fail('wx is not ready', 1);
       return ;
@@ -77,7 +79,7 @@ class IndexContainer extends Component {
         var point = new BMap.Point(res.longitude,res.latitude);
         var gc = new BMap.Geocoder();
         gc.getLocation(point, function (res) {
-          alert(JSON.stringify(res))
+          // alert(JSON.stringify(res))
         })
       }
     });
@@ -96,9 +98,8 @@ class IndexContainer extends Component {
 
   componentDidUpdate() {
     console.log("update了哦" + this.props.wxReady)
-    this.getLocation()
+    this.Location()
   }
-
   componentDidMount() {
     this.props.isWxReady()
   }

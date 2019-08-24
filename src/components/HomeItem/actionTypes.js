@@ -1,0 +1,1 @@
+export const GETLOCATION = 'appointment/detail/location'

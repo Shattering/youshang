@@ -29,15 +29,19 @@ const StyledHomeItem = styled.div`
 
 }
 .home-item-wrap dd {
-    height: .24rem;  
+    height: auto;  
 }
-.home-item-wrap dd span{
+.home-item-wrap dd span, .experience{
     display: inline-block;
     margin-right: .12rem;
     background-color: #f6f6f6;
     font-size: .14rem;
     font-weight: 100;
     padding:0 .05rem ;
+}
+.experience{
+    margin-top: .1rem;
+    margin-left: .1rem;
 }
 .home-item-wrap dd .time{
     background-color: #fff;

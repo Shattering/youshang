@@ -23,10 +23,20 @@ const StyledForgetCode = styled.div`
       padding-left:.15rem;
     }
   }
-  form{
+  .form{
     display:block;
     text-align:center;
     position: relative;
+    input{
+      display:block;
+      width:82%;
+      margin:0 auto;
+      height:.49rem;
+      border-top:none;
+      border-left:none;
+      border-right:none;
+      padding-left:.31rem;
+    }
     button{
       position:absolute;
       z-index:100;
@@ -50,7 +60,7 @@ const StyledForgetCode = styled.div`
       background-size:.22rem .21rem;
     }
   }
-  .confirm{
+  .next{
     text-align:center;
     button{
         width:3.05rem;

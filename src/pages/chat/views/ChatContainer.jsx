@@ -43,7 +43,7 @@ class ChatContainer extends Component {
 
   //实现websocket
   Websocket() {
-    this.ws = new WebSocket('ws://10.9.65.209:3333/chat')
+    this.ws = new WebSocket('ws://localhost:3333/chat')
   
     this.ws.onmessage = (msg) => {
       let data = JSON.parse(msg.data)
